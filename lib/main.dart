@@ -6,7 +6,7 @@ import 'package:portfolio/style/colours.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/home_page.dart';
 import 'package:portfolio/style/text_demo.dart';
-import 'package:portfolio/style/text_theme.dart';
+import 'package:portfolio/style/app_theme.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());
@@ -36,13 +36,11 @@ class MyApp extends StatelessWidget {
         cardTheme: PortfolioTheme.cardTheme(context),
         textTheme: PortfolioTheme.textTheme(context),
       ),
-      // onGenerateInitialRoutes: ,
       routes: {
         '/': (_) => HomePage(),
         HomePage.route: (_) => HomePage(),
         TextDemo.route: (_) => TextDemo(),
       },
-      // onGenerateRoute: onGenerateRoute,
       onUnknownRoute: (setting) {
         return MaterialPageRoute(builder: (_) => NotFound404());
       },

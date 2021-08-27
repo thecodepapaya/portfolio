@@ -1,4 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:portfolio/about/about.dart';
+import 'package:portfolio/components/left_sider.dart';
+import 'package:portfolio/components/right_sider.dart';
+import 'package:portfolio/constants.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -9,48 +15,55 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final String text = 'The quick brown fox jumped upon the lazy dog';
+  ScrollController _controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(text, style: Theme.of(context).textTheme.bodyText1),
-              Text(text, style: Theme.of(context).textTheme.bodyText2),
-              Text(text, style: Theme.of(context).textTheme.button),
-              Text(text, style: Theme.of(context).textTheme.headline1),
-              Text(text, style: Theme.of(context).textTheme.headline2),
-              Text(text, style: Theme.of(context).textTheme.headline3),
-              Text(text, style: Theme.of(context).textTheme.headline4),
-              Text(text, style: Theme.of(context).textTheme.headline5),
-              Text(text, style: Theme.of(context).textTheme.headline6),
-              Text(text, style: Theme.of(context).textTheme.caption),
-              Text(text, style: Theme.of(context).textTheme.overline),
-              Text(text, style: Theme.of(context).textTheme.subtitle1),
-              Text(text, style: Theme.of(context).textTheme.subtitle2),
-              SizedBox(height: 50),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text("Hello World"),
-                ),
-              ),
-            ],
+      body: Row(
+        children: [
+          RotatedBox(
+            quarterTurns: 3,
+            child: LeftSider(),
           ),
-        ),
+          SizedBox(width: Constants.homeHorizontalPadding),
+          Expanded(child: About()),
+          Expanded(
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              controller: _controller,
+              child: Column(
+                children: [
+                  Container(height: 490, color: Colors.green),
+                  Container(height: 490, color: Colors.yellow),
+                  Container(height: 490, color: Colors.pink),
+                  Container(height: 490, color: Colors.orange),
+                  Container(height: 490, color: Colors.red),
+                  Container(height: 490, color: Colors.blue),
+                  Container(height: 490, color: Colors.white),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(width: Constants.homeHorizontalPadding),
+          RotatedBox(
+            quarterTurns: 1,
+            child: RightSider(),
+          ),
+        ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.pushNamed(context, ProjectsPage.route);
-      //   },
-      //   tooltip: 'Increment',
-      //   child: Icon(Icons.add),
-      // ),
+      floatingActionButton: FloatingActionButton(
+        child: Text("T"),
+        onPressed: () {
+          log(_controller.position.toString());
+        },
+      ),
     );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }

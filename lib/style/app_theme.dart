@@ -19,7 +19,7 @@ class PortfolioTheme {
       headline1: Theme.of(context)
           .textTheme
           .headline1
-          ?.copyWith(color: ColorPalette.h1Text),
+          ?.copyWith(color: ColorPalette.h1Text, fontSize: 84),
       headline2: Theme.of(context)
           .textTheme
           .headline2

@@ -50,6 +50,66 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Looks like you are lost`
+  String get NotFound404 {
+    return Intl.message(
+      'Looks like you are lost',
+      name: 'NotFound404',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I’m a Staff Software Engineer currently working as Tech Lead of the Doc Squad at Algolia. I mostly do front-end development, and I’m a Vue.js and CSS nerd. I can't shut up about test-driven development and utility-first CSS. I also host the Developer Experience podcast, and share what I learn on my blog frontstuff.io, or at meetups and conferences.`
+  String get aboutDesc {
+    return Intl.message(
+      'I’m a Staff Software Engineer currently working as Tech Lead of the Doc Squad at Algolia. I mostly do front-end development, and I’m a Vue.js and CSS nerd. I can\'t shut up about test-driven development and utility-first CSS. I also host the Developer Experience podcast, and share what I learn on my blog frontstuff.io, or at meetups and conferences.',
+      name: 'aboutDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I'm`
+  String get greeting {
+    return Intl.message(
+      'I\'m',
+      name: 'greeting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `c Designed and created by Ashutosh Singh.`
+  String get leftSider {
+    return Intl.message(
+      'c Designed and created by Ashutosh Singh.',
+      name: 'leftSider',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Projects`
+  String get projects {
+    return Intl.message(
+      'Projects',
+      name: 'projects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Made with love and Flutter`
+  String get rightSider {
+    return Intl.message(
+      'Made with love and Flutter',
+      name: 'rightSider',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Ashutosh Singh`
   String get title {
     return Intl.message(

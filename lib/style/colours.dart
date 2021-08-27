@@ -27,10 +27,10 @@ class ColorPalette {
   static Color subtitleText = Color(0xFF59534F);
   static Color h1Text = Colors.white;
   static Color h2Text = Colors.white;
-  static Color h3Text = Colors.white70;
-  static Color h4Text = Colors.white60;
-  static Color h5Text = Colors.white54;
-  static Color h6Text = Colors.white38;
+  static Color h3Text = Colors.white;
+  static Color h4Text = Colors.white70;
+  static Color h5Text = Colors.white60;
+  static Color h6Text = Colors.white54;
   static Color offWhiteText = Colors.white70;
   static Color descriptionText = Color(0xFF6D8392);
   static Color highlightText = Color(0xFFE0EDF5);

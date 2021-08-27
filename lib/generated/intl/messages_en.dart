@@ -21,6 +21,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "NotFound404":
+            MessageLookupByLibrary.simpleMessage("Looks like you are lost"),
+        "aboutDesc": MessageLookupByLibrary.simpleMessage(
+            "I’m a Staff Software Engineer currently working as Tech Lead of the Doc Squad at Algolia. I mostly do front-end development, and I’m a Vue.js and CSS nerd. I can\'t shut up about test-driven development and utility-first CSS. I also host the Developer Experience podcast, and share what I learn on my blog frontstuff.io, or at meetups and conferences."),
+        "greeting": MessageLookupByLibrary.simpleMessage("I\'m"),
+        "leftSider": MessageLookupByLibrary.simpleMessage(
+            "c Designed and created by Ashutosh Singh."),
+        "projects": MessageLookupByLibrary.simpleMessage("Projects"),
+        "rightSider":
+            MessageLookupByLibrary.simpleMessage("Made with love and Flutter"),
         "title": MessageLookupByLibrary.simpleMessage("Ashutosh Singh")
       };
 }
