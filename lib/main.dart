@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         accentColor: ColorPalette.h1Text,
         cardTheme: PortfolioTheme.cardTheme(context),
         textTheme: PortfolioTheme.textTheme(context),
+        iconTheme: PortfolioTheme.iconTheme(context),
       ),
       routes: {
         '/': (_) => HomePage(),

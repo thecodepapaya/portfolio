@@ -80,10 +80,10 @@ class S {
     );
   }
 
-  /// `c Designed and created by Ashutosh Singh.`
+  /// `c Designed and created by Ashutosh Singh`
   String get leftSider {
     return Intl.message(
-      'c Designed and created by Ashutosh Singh.',
+      'c Designed and created by Ashutosh Singh',
       name: 'leftSider',
       desc: '',
       args: [],

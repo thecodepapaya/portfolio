@@ -22,7 +22,7 @@ class ColorPalette {
   });
 
   static Color background = Color(0xFF171717);
-  static Color backgroundLight = Color(0xFF363636);
+  static Color backgroundLight = Color(0xFF202022);
 
   static Color subtitleText = Color(0xFF59534F);
   static Color h1Text = Colors.white;

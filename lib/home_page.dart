@@ -2,9 +2,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/about/about.dart';
+import 'package:portfolio/achievements/achievements.dart';
 import 'package:portfolio/components/left_sider.dart';
 import 'package:portfolio/components/right_sider.dart';
 import 'package:portfolio/constants.dart';
+import 'package:portfolio/experience/experience.dart';
+import 'package:portfolio/projects/projects.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -17,6 +20,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   ScrollController _controller = ScrollController();
 
+  GlobalKey _projectKey = GlobalKey();
+  GlobalKey _experienceKey = GlobalKey();
+  GlobalKey _achievementKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,20 +34,20 @@ class _HomePageState extends State<HomePage> {
             child: LeftSider(),
           ),
           SizedBox(width: Constants.homeHorizontalPadding),
-          Expanded(child: About()),
+          Expanded(
+            child: About(),
+          ),
           Expanded(
             child: SingleChildScrollView(
               physics: BouncingScrollPhysics(),
               controller: _controller,
               child: Column(
                 children: [
-                  Container(height: 490, color: Colors.green),
-                  Container(height: 490, color: Colors.yellow),
-                  Container(height: 490, color: Colors.pink),
-                  Container(height: 490, color: Colors.orange),
-                  Container(height: 490, color: Colors.red),
-                  Container(height: 490, color: Colors.blue),
-                  Container(height: 490, color: Colors.white),
+                  SizedBox(height: Constants.aboutTopPadding),
+                  Projects(key: _projectKey),
+                  Experience(key: _experienceKey),
+                  Achievements(key: _achievementKey),
+                  SizedBox(height: Constants.aboutBottomPadding),
                 ],
               ),
             ),
@@ -55,7 +62,11 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         child: Text("T"),
         onPressed: () {
-          log(_controller.position.toString());
+          Scrollable.ensureVisible(
+            _experienceKey.currentContext!,
+            duration: Duration(seconds: 1),
+            curve: Curves.fastLinearToSlowEaseIn,
+          );
         },
       ),
     );
@@ -63,7 +74,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    _controller.dispose();
     super.dispose();
   }
 }

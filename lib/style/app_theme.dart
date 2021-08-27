@@ -61,9 +61,16 @@ class PortfolioTheme {
 
   static CardTheme cardTheme(BuildContext context) {
     return CardTheme(
+      margin: EdgeInsets.all(4),
       elevation: 12,
       color: ColorPalette.backgroundLight,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+    );
+  }
+
+  static IconThemeData iconTheme(context) {
+    return IconThemeData(
+      color: ColorPalette.h1Text,
     );
   }
 }
