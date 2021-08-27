@@ -6,6 +6,8 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case '/':
     case HomePage.route:
       return MaterialPageRoute(builder: (_) => HomePage());
+    // case ProjectsPage.route:
+    //   return MaterialPageRoute(builder: (_) => ProjectsPage());
 
     default:
   }

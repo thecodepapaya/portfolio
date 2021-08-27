@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:portfolio/404.dart';
+import 'package:portfolio/style/colours.dart';
 import 'package:portfolio/generated/l10n.dart';
-import 'package:portfolio/routes.dart';
+import 'package:portfolio/home_page.dart';
+import 'package:portfolio/style/text_demo.dart';
+import 'package:portfolio/style/text_theme.dart';
 
 void main() {
+  setUrlStrategy(PathUrlStrategy());
   runApp(MyApp());
 }
 
@@ -24,13 +30,22 @@ class MyApp extends StatelessWidget {
         Locale('en', ''),
       ],
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-        ),
+        scaffoldBackgroundColor: ColorPalette.background,
+        primaryColor: ColorPalette.background,
+        accentColor: ColorPalette.h1Text,
+        cardTheme: PortfolioTheme.cardTheme(context),
+        textTheme: PortfolioTheme.textTheme(context),
       ),
-      onGenerateRoute: onGenerateRoute,
+      // onGenerateInitialRoutes: ,
+      routes: {
+        '/': (_) => HomePage(),
+        HomePage.route: (_) => HomePage(),
+        TextDemo.route: (_) => TextDemo(),
+      },
+      // onGenerateRoute: onGenerateRoute,
+      onUnknownRoute: (setting) {
+        return MaterialPageRoute(builder: (_) => NotFound404());
+      },
       initialRoute: '/',
     );
   }

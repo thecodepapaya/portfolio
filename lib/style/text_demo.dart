@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
-  static const String route = "/home";
+class TextDemo extends StatelessWidget {
+  static const String route = "/text";
 
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   final String text = 'The quick brown fox jumped upon the lazy dog';
 
   @override
@@ -44,13 +38,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.pushNamed(context, ProjectsPage.route);
-      //   },
-      //   tooltip: 'Increment',
-      //   child: Icon(Icons.add),
-      // ),
     );
   }
 }
