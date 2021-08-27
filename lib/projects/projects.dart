@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/constants.dart';
 import 'package:portfolio/projects/project_card.dart';
 
 class Projects extends StatelessWidget {
@@ -8,6 +9,7 @@ class Projects extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: Constants.aboutTopPadding),
         ProjectCard(),
         ProjectCard(),
         ProjectCard(),

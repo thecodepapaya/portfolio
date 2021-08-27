@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:portfolio/about/about.dart';
 import 'package:portfolio/achievements/achievements.dart';
@@ -35,7 +33,11 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(width: Constants.homeHorizontalPadding),
           Expanded(
-            child: About(),
+            child: About(
+              achievementKey: _achievementKey,
+              experienceKey: _experienceKey,
+              projectKey: _projectKey,
+            ),
           ),
           Expanded(
             child: SingleChildScrollView(
@@ -43,7 +45,7 @@ class _HomePageState extends State<HomePage> {
               controller: _controller,
               child: Column(
                 children: [
-                  SizedBox(height: Constants.aboutTopPadding),
+                  // SizedBox(height: Constants.aboutTopPadding),
                   Projects(key: _projectKey),
                   Experience(key: _experienceKey),
                   Achievements(key: _achievementKey),
@@ -59,16 +61,16 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Text("T"),
-        onPressed: () {
-          Scrollable.ensureVisible(
-            _experienceKey.currentContext!,
-            duration: Duration(seconds: 1),
-            curve: Curves.fastLinearToSlowEaseIn,
-          );
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   child: Text("T"),
+      //   onPressed: () {
+      //     Scrollable.ensureVisible(
+      //       _experienceKey.currentContext!,
+      //       duration: Duration(seconds: 1),
+      //       curve: Curves.fastLinearToSlowEaseIn,
+      //     );
+      //   },
+      // ),
     );
   }
 

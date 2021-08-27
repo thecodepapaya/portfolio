@@ -5,7 +5,16 @@ import 'package:portfolio/constants.dart';
 import 'package:portfolio/generated/l10n.dart';
 
 class About extends StatelessWidget {
-  const About({Key? key}) : super(key: key);
+  const About({
+    Key? key,
+    required this.projectKey,
+    required this.experienceKey,
+    required this.achievementKey,
+  }) : super(key: key);
+
+  final GlobalKey projectKey;
+  final GlobalKey experienceKey;
+  final GlobalKey achievementKey;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +41,11 @@ class About extends StatelessWidget {
                   style: Theme.of(context).textTheme.subtitle1),
             ],
           ),
-          Tabs(),
+          Tabs(
+            achievementKey: achievementKey,
+            experienceKey: experienceKey,
+            projectKey: projectKey,
+          ),
           Contact(),
         ],
       ),

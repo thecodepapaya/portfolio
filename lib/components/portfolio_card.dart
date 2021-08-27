@@ -1,9 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/scale_animator.dart';
 import 'package:portfolio/constants.dart';
 
-class PortfolioCard extends StatefulWidget {
+class PortfolioCard extends StatelessWidget {
   const PortfolioCard({
     Key? key,
     required this.child,
@@ -14,47 +13,19 @@ class PortfolioCard extends StatefulWidget {
   final double height;
 
   @override
-  _PortfolioCardState createState() => _PortfolioCardState();
-}
-
-class _PortfolioCardState extends State<PortfolioCard> {
-  double scale = 1;
-  late Timer timer;
-  double cardHeight = Constants.cardHeight;
-
-  @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      onEnter: (e) {
-        setState(() {
-          cardHeight *= 1.1;
-        });
-        timer = Timer(Duration(seconds: 3), () {
-          setState(() {
-            cardHeight = Constants.cardHeight;
-          });
-        });
-      },
-      onExit: (e) {
-        setState(() {
-          cardHeight = Constants.cardHeight;
-        });
-      },
-      child: Card(
-        child: AnimatedContainer(
-          duration: Duration(milliseconds: 200),
-          padding: EdgeInsets.all(35),
-          width: Constants.aspectRatio * cardHeight,
-          height: cardHeight,
-          child: widget.child,
+      cursor: SystemMouseCursors.click,
+      child: ScaleAnimator(
+        child: Card(
+          child: Container(
+            padding: EdgeInsets.all(35),
+            width: Constants.aspectRatio * Constants.cardHeight,
+            height: Constants.cardHeight,
+            child: child,
+          ),
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    timer.cancel();
-    super.dispose();
   }
 }

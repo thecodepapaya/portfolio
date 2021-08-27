@@ -19,17 +19,29 @@ class Contact extends StatelessWidget {
         ),
         SizedBox(width: 50),
         contactIcon(
-            iconData: FontAwesomeIcons.solidEnvelope,
-            url: "mailto:thecodepapaya@gmail.com"),
+          iconData: FontAwesomeIcons.solidEnvelope,
+          url: "mailto:thecodepapaya@gmail.com",
+        ),
         contactIcon(
-            iconData: FontAwesomeIcons.twitter,
-            url: "https://twitter.com/thecodepapaya"),
+          iconData: FontAwesomeIcons.twitter,
+          url: "https://twitter.com/thecodepapaya",
+        ),
         contactIcon(
-            iconData: FontAwesomeIcons.github,
-            url: "https://github.com/thecodepapaya"),
+          iconData: FontAwesomeIcons.github,
+          url: "https://github.com/thecodepapaya",
+        ),
         contactIcon(
-            iconData: FontAwesomeIcons.linkedinIn,
-            url: "https://linkedin.com/in/ashutoshsingh05as"),
+          iconData: FontAwesomeIcons.linkedinIn,
+          url: "https://linkedin.com/in/ashutoshsingh05as",
+        ),
+        contactIcon(
+          iconData: FontAwesomeIcons.stackOverflow,
+          url: "https://stackoverflow.com/users/10505839/ashutosh-singh",
+        ),
+        contactIcon(
+          iconData: FontAwesomeIcons.discord,
+          url: "https://discord.com/users/878192996825305128",
+        ),
       ],
     );
   }
