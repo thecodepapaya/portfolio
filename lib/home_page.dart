@@ -52,10 +52,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Row(
         children: [
-          RotatedBox(
-            quarterTurns: 3,
-            child: LeftSider(),
-          ),
+          // RotatedBox(
+          //   quarterTurns: 3,
+          //   child: LeftSider(),
+          // ),
           SizedBox(width: Constants.homeHorizontalPadding),
           Expanded(child: About(tabData: tabData)),
           Expanded(
@@ -85,10 +85,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(width: Constants.homeHorizontalPadding),
-          RotatedBox(
-            quarterTurns: 1,
-            child: RightSider(),
-          ),
+          // RotatedBox(
+          //   quarterTurns: 1,
+          //   child: RightSider(),
+          // ),
         ],
       ),
     );

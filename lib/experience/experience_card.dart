@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/portfolio_card.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/experience/experience_data.dart';
-import 'package:portfolio/projects/card_tag.dart';
+import 'package:portfolio/components/card_tag.dart';
 import 'package:portfolio/style/colours.dart';
 
 class ExperienceCard extends StatelessWidget {
@@ -27,7 +27,7 @@ class ExperienceCard extends StatelessWidget {
             children: [
               FaIcon(
                 FontAwesomeIcons.briefcase,
-                size: Constants.faIconSizeRegular - 4,
+                size: Constants.faIconSizeCardHeader,
                 color: ColorPalette.dullWhite,
               ),
               CardTag(tag: data.position),
@@ -39,36 +39,9 @@ class ExperienceCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(data.startYearMonth.toUpperCase()),
+              Text(data.startYearMonth),
               Text(" - "),
-              Text(data.endYearMonth.toUpperCase()),
-              // IconButton(
-              //   icon: FaIcon(
-              //     FontAwesomeIcons.github,
-              //     size: Constants.faIconSizeCard,
-              //     color: ColorPalette.dullWhite,
-              //   ),
-              //   padding: EdgeInsets.zero,
-              //   constraints: BoxConstraints(minHeight: 0, minWidth: 0),
-              //   splashRadius: Constants.cardIconSplash,
-              //   onPressed: () {
-              //     launch(data.gitHub);
-              //   },
-              // ),
-              // SizedBox(width: 8),
-              // IconButton(
-              //   icon: FaIcon(
-              //     FontAwesomeIcons.externalLinkAlt,
-              //     size: Constants.faIconSizeCard,
-              //     color: ColorPalette.dullWhite,
-              //   ),
-              //   padding: EdgeInsets.zero,
-              //   constraints: BoxConstraints(minHeight: 0, minWidth: 0),
-              //   splashRadius: Constants.cardIconSplash,
-              //   onPressed: () {
-              //     launch(data.link);
-              //   },
-              // ),
+              Text(data.endYearMonth),
             ],
           ),
         ],

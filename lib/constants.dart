@@ -8,6 +8,7 @@ class Constants {
 
   static const double faIconSizeRegular = 20.0;
   static const double faIconSizeCard = 12.0;
+  static const double faIconSizeCardHeader = 16.0;
 
   static const double cardHeight = 180.0;
   static const double cardAspectRatio = 3.3;

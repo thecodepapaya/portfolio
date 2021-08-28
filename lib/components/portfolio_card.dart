@@ -5,17 +5,19 @@ import 'package:portfolio/constants.dart';
 class PortfolioCard extends StatelessWidget {
   const PortfolioCard({
     Key? key,
-    required this.child,
     this.height = 200,
+    this.cursor = SystemMouseCursors.basic,
+    required this.child,
   }) : super(key: key);
 
   final Widget child;
   final double height;
+  final MouseCursor cursor;
 
   @override
   Widget build(BuildContext context) {
     return ScaleAnimator(
-      cursor: SystemMouseCursors.basic,
+      cursor: cursor,
       child: Card(
         child: Container(
           padding: EdgeInsets.symmetric(

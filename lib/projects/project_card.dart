@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/portfolio_card.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/projects/project_data.dart';
-import 'package:portfolio/projects/card_tag.dart';
+import 'package:portfolio/components/card_tag.dart';
 import 'package:portfolio/style/colours.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -13,7 +13,7 @@ class ProjectCard extends StatelessWidget {
     required this.data,
   }) : super(key: key);
 
-  final ProjectCardData data;
+  final ProjectData data;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class ProjectCard extends StatelessWidget {
             children: [
               FaIcon(
                 FontAwesomeIcons.tools,
-                size: Constants.faIconSizeRegular - 4,
+                size: Constants.faIconSizeCardHeader,
                 color: ColorPalette.dullWhite,
               ),
               Row(

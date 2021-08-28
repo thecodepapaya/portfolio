@@ -1,5 +1,5 @@
-class ProjectCardData {
-  ProjectCardData({
+class ProjectData {
+  ProjectData({
     required this.title,
     required this.description,
     required this.gitHub,

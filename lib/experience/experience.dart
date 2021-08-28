@@ -20,45 +20,24 @@ class Experience extends StatelessWidget {
 final data = [
   ExperienceData(
     organizationName: "Some Company",
-    position: "SDE1",
+    position: "SDE",
     description:
         "I worked on x with y to achieve z without doing p or q. I worked on x with y to achieve z without doing p or q. I worked on x with y to achieve z without doing p or q.I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "2020",
+    startYearMonth: "Aug 21",
     endYearMonth: "Present",
   ),
   ExperienceData(
     organizationName: "Some Company",
-    position: "SDE1",
+    position: "Intern",
     description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "2020",
-    endYearMonth: "2021",
+    startYearMonth: "Jul 20",
+    endYearMonth: "Jul 21",
   ),
   ExperienceData(
     organizationName: "Some Company",
-    position: "SDE1",
+    position: "Trainee",
     description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "JUN 19",
-    endYearMonth: "JUL 20",
-  ),
-  ExperienceData(
-    organizationName: "Some Company",
-    position: "SDE1",
-    description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "JUN",
-    endYearMonth: "JUL",
-  ),
-  ExperienceData(
-    organizationName: "Some Company",
-    position: "SDE1",
-    description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "JUN",
-    endYearMonth: "JUL",
-  ),
-  ExperienceData(
-    organizationName: "Some Company",
-    position: "SDE1",
-    description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "JUN 19",
-    endYearMonth: "JUL 19",
+    startYearMonth: "Jun 19",
+    endYearMonth: "Jul 20",
   ),
 ];

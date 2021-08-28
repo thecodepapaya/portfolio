@@ -18,7 +18,7 @@ class Projects extends StatelessWidget {
 }
 
 final data = [
-  ProjectCardData(
+  ProjectData(
     title: "Sweet title",
     description:
         "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
@@ -26,7 +26,7 @@ final data = [
     link: "",
     technologies: ["Flutter", "Firebase"],
   ),
-  ProjectCardData(
+  ProjectData(
     title: "Sweet title",
     description:
         "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
@@ -34,7 +34,7 @@ final data = [
     link: "",
     technologies: ["Flutter"],
   ),
-  ProjectCardData(
+  ProjectData(
     title: "Sweet title",
     description:
         "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
@@ -42,7 +42,7 @@ final data = [
     link: "",
     technologies: ["Flutter"],
   ),
-  ProjectCardData(
+  ProjectData(
     title: "Sweet title",
     description:
         "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
@@ -50,7 +50,7 @@ final data = [
     link: "",
     technologies: ["Flutter"],
   ),
-  ProjectCardData(
+  ProjectData(
     title: "Sweet title",
     description:
         "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
@@ -58,7 +58,7 @@ final data = [
     link: "",
     technologies: ["Flutter"],
   ),
-  ProjectCardData(
+  ProjectData(
     title: "Sweet title",
     description:
         "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
@@ -66,7 +66,7 @@ final data = [
     link: "",
     technologies: ["Flutter"],
   ),
-  ProjectCardData(
+  ProjectData(
     title: "Sweet title",
     description:
         "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",

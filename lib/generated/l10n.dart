@@ -166,6 +166,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Min`
+  String get blogMin {
+    return Intl.message(
+      'Min',
+      name: 'blogMin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
