@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 class Contact extends StatelessWidget {
   const Contact({Key? key}) : super(key: key);
 
-  final iconSize = Constants.faIconSize;
+  final iconSize = Constants.faIconSizeRegular;
 
   @override
   Widget build(BuildContext context) {

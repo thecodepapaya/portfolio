@@ -19,15 +19,24 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(greeting) => "${Intl.select(greeting, {
+            'em': 'Good morning, early bird',
+            'm': 'Good Morning',
+            'a': 'Good Afternoon',
+            'e': 'Good Evening',
+            'n': 'Hi there, night owl',
+            'other': 'Hello',
+          })}. I\'m ";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutDesc": MessageLookupByLibrary.simpleMessage(
-            "I\'m a Staff Software Engineer currently working as Tech Lead of the Doc Squad at Algolia. I mostly do front-end development, and I\'m a Vue.js and CSS nerd. I can\'t shut up about test-driven development and utility-first CSS. I also host the Developer Experience podcast, and share what I learn on my blog frontstuff.io, or at meetups and conferences."),
-        "aboutGreeting": MessageLookupByLibrary.simpleMessage("I\'m"),
+            "I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor\'s degree majoring in computer science from Indian Institiute of Information Technology, Vadodara."),
+        "aboutGreeting": m0,
         "leftSider": MessageLookupByLibrary.simpleMessage(
             "c Designed and created by Ashutosh Singh"),
         "notFoundDespise": MessageLookupByLibrary.simpleMessage(
-            "Looks like you are lost ... on a single page application :|"),
+            "Looks like you are lost ... on a single page application, duh!"),
         "notFoundHome":
             MessageLookupByLibrary.simpleMessage("Take me back to 127.0.0.1"),
         "notFoundInterjaction": MessageLookupByLibrary.simpleMessage("Oh no!"),

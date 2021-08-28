@@ -50,20 +50,47 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Oh no!`
-  String get notFoundInterjaction {
+  /// `I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor's degree majoring in computer science from Indian Institiute of Information Technology, Vadodara.`
+  String get aboutDesc {
     return Intl.message(
-      'Oh no!',
-      name: 'notFoundInterjaction',
+      'I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor\'s degree majoring in computer science from Indian Institiute of Information Technology, Vadodara.',
+      name: 'aboutDesc',
       desc: '',
       args: [],
     );
   }
 
-  /// `Looks like you are lost ... on a single page application :|`
+  /// `{greeting, select, em {Good morning, early bird} m {Good Morning} a {Good Afternoon} e {Good Evening} n {Hi there, night owl} other {Hello}}. I'm `
+  String aboutGreeting(Object greeting) {
+    return Intl.message(
+      '${Intl.select(greeting, {
+            'em': 'Good morning, early bird',
+            'm': 'Good Morning',
+            'a': 'Good Afternoon',
+            'e': 'Good Evening',
+            'n': 'Hi there, night owl',
+            'other': 'Hello'
+          })}. I\'m ',
+      name: 'aboutGreeting',
+      desc: '',
+      args: [greeting],
+    );
+  }
+
+  /// `c Designed and created by Ashutosh Singh`
+  String get leftSider {
+    return Intl.message(
+      'c Designed and created by Ashutosh Singh',
+      name: 'leftSider',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Looks like you are lost ... on a single page application, duh!`
   String get notFoundDespise {
     return Intl.message(
-      'Looks like you are lost ... on a single page application :|',
+      'Looks like you are lost ... on a single page application, duh!',
       name: 'notFoundDespise',
       desc: '',
       args: [],
@@ -80,31 +107,11 @@ class S {
     );
   }
 
-  /// `I'm a Staff Software Engineer currently working as Tech Lead of the Doc Squad at Algolia. I mostly do front-end development, and I'm a Vue.js and CSS nerd. I can't shut up about test-driven development and utility-first CSS. I also host the Developer Experience podcast, and share what I learn on my blog frontstuff.io, or at meetups and conferences.`
-  String get aboutDesc {
+  /// `Oh no!`
+  String get notFoundInterjaction {
     return Intl.message(
-      'I\'m a Staff Software Engineer currently working as Tech Lead of the Doc Squad at Algolia. I mostly do front-end development, and I\'m a Vue.js and CSS nerd. I can\'t shut up about test-driven development and utility-first CSS. I also host the Developer Experience podcast, and share what I learn on my blog frontstuff.io, or at meetups and conferences.',
-      name: 'aboutDesc',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `I'm`
-  String get aboutGreeting {
-    return Intl.message(
-      'I\'m',
-      name: 'aboutGreeting',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `c Designed and created by Ashutosh Singh`
-  String get leftSider {
-    return Intl.message(
-      'c Designed and created by Ashutosh Singh',
-      name: 'leftSider',
+      'Oh no!',
+      name: 'notFoundInterjaction',
       desc: '',
       args: [],
     );

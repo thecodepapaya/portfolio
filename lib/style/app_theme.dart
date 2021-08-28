@@ -12,42 +12,29 @@ class PortfolioTheme {
           .textTheme
           .bodyText2
           ?.copyWith(color: ColorPalette.descriptionText),
-      button: Theme.of(context)
-          .textTheme
-          .button
-          ?.copyWith(color: ColorPalette.h3Text),
+      button: Theme.of(context).textTheme.button?.copyWith(color: Colors.white),
       headline1: Theme.of(context)
           .textTheme
           .headline1
-          ?.copyWith(color: ColorPalette.h1Text, fontSize: 84),
-      headline2: Theme.of(context)
-          .textTheme
-          .headline2
-          ?.copyWith(color: ColorPalette.h2Text),
-      headline3: Theme.of(context)
-          .textTheme
-          .headline3
-          ?.copyWith(color: ColorPalette.h3Text),
-      headline4: Theme.of(context)
-          .textTheme
-          .headline4
-          ?.copyWith(color: ColorPalette.h4Text),
-      headline5: Theme.of(context)
-          .textTheme
-          .headline5
-          ?.copyWith(color: ColorPalette.h5Text),
-      headline6: Theme.of(context)
-          .textTheme
-          .headline6
-          ?.copyWith(color: ColorPalette.h6Text),
+          ?.copyWith(color: Colors.white, fontSize: 84),
+      headline2:
+          Theme.of(context).textTheme.headline2?.copyWith(color: Colors.white),
+      headline3:
+          Theme.of(context).textTheme.headline3?.copyWith(color: Colors.white),
+      headline4:
+          Theme.of(context).textTheme.headline4?.copyWith(color: Colors.white),
+      headline5:
+          Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white),
+      headline6:
+          Theme.of(context).textTheme.headline6?.copyWith(color: Colors.white),
       caption: Theme.of(context)
           .textTheme
           .caption
-          ?.copyWith(color: ColorPalette.h6Text),
+          ?.copyWith(color: ColorPalette.dullWhite),
       overline: Theme.of(context)
           .textTheme
           .overline
-          ?.copyWith(color: ColorPalette.h6Text),
+          ?.copyWith(color: ColorPalette.dullWhite),
       subtitle1: Theme.of(context)
           .textTheme
           .subtitle1
@@ -70,7 +57,7 @@ class PortfolioTheme {
 
   static IconThemeData iconTheme(context) {
     return IconThemeData(
-      color: ColorPalette.h1Text,
+      color: Colors.white,
     );
   }
 }

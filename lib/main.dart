@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: ColorPalette.background,
         primaryColor: ColorPalette.background,
-        accentColor: ColorPalette.h1Text,
+        accentColor: Colors.white,
         cardTheme: PortfolioTheme.cardTheme(context),
         textTheme: PortfolioTheme.textTheme(context),
         iconTheme: PortfolioTheme.iconTheme(context),

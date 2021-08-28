@@ -15,10 +15,14 @@ class PortfolioCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaleAnimator(
+      cursor: SystemMouseCursors.basic,
       child: Card(
         child: Container(
-          padding: EdgeInsets.all(35),
-          width: Constants.aspectRatio * Constants.cardHeight,
+          padding: EdgeInsets.symmetric(
+            vertical: Constants.cardPaddingVert,
+            horizontal: Constants.cardPaddingHori,
+          ),
+          width: Constants.cardAspectRatio * Constants.cardHeight,
           height: Constants.cardHeight,
           child: child,
         ),
