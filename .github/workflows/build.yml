@@ -34,7 +34,7 @@ jobs:
           channel: stable
       - name: Fetch dependencies
         run: flutter pub get
-      - name: Run Tests
-        run: flutter test
+#       - name: Run Tests
+#         run: flutter test
       - name: Build Web
         run: flutter build web
