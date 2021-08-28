@@ -7,14 +7,10 @@ import 'package:portfolio/generated/l10n.dart';
 class About extends StatelessWidget {
   const About({
     Key? key,
-    required this.projectKey,
-    required this.experienceKey,
-    required this.achievementKey,
+    required this.tabData,
   }) : super(key: key);
 
-  final GlobalKey projectKey;
-  final GlobalKey experienceKey;
-  final GlobalKey achievementKey;
+  final List<TabData> tabData;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +28,7 @@ class About extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(S.of(context).greeting,
+              Text(S.of(context).aboutGreeting,
                   style: Theme.of(context).textTheme.headline2),
               Text(S.of(context).title + '.',
                   style: Theme.of(context).textTheme.headline1),
@@ -41,12 +37,8 @@ class About extends StatelessWidget {
                   style: Theme.of(context).textTheme.subtitle1),
             ],
           ),
-          Tabs(
-            achievementKey: achievementKey,
-            experienceKey: experienceKey,
-            projectKey: projectKey,
-          ),
-          Contact(),
+          Tabs(tabData: tabData),
+          const Contact(),
         ],
       ),
     );

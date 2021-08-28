@@ -4,10 +4,11 @@ class ScaleAnimator extends StatefulWidget {
   const ScaleAnimator({
     Key? key,
     required this.child,
+    this.scaleExtent = 1.05,
   }) : super(key: key);
 
   final Widget child;
-  final double scaleExtent = 1.05;
+  final double scaleExtent;
 
   @override
   _ScaleAnimatorState createState() => _ScaleAnimatorState();

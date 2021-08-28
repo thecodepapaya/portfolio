@@ -71,10 +71,10 @@ class S {
   }
 
   /// `I'm`
-  String get greeting {
+  String get aboutGreeting {
     return Intl.message(
       'I\'m',
-      name: 'greeting',
+      name: 'aboutGreeting',
       desc: '',
       args: [],
     );
@@ -90,21 +90,41 @@ class S {
     );
   }
 
-  /// `Projects`
-  String get projects {
-    return Intl.message(
-      'Projects',
-      name: 'projects',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Made with love and Flutter`
   String get rightSider {
     return Intl.message(
       'Made with love and Flutter',
       name: 'rightSider',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Achievements`
+  String get tabAchievements {
+    return Intl.message(
+      'Achievements',
+      name: 'tabAchievements',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experience`
+  String get tabExperience {
+    return Intl.message(
+      'Experience',
+      name: 'tabExperience',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Projects`
+  String get tabProjects {
+    return Intl.message(
+      'Projects',
+      name: 'tabProjects',
       desc: '',
       args: [],
     );
