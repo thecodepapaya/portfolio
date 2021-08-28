@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/portfolio_card.dart';
 
-class AchievementCard extends StatelessWidget {
-  const AchievementCard({Key? key}) : super(key: key);
+class BlogCard extends StatelessWidget {
+  const BlogCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PortfolioCard(
       child: Column(
         children: [
-          Text("Projetc Card Title"),
-          Text("Projetc Card subtitle"),
+          Text("Blog Card Title"),
+          Text("Blog Card subtitle"),
         ],
       ),
     );

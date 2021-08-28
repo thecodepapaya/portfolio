@@ -5,10 +5,12 @@ class ScaleAnimator extends StatefulWidget {
     Key? key,
     required this.child,
     this.scaleExtent = 1.05,
+    this.cursor = SystemMouseCursors.click,
   }) : super(key: key);
 
   final Widget child;
   final double scaleExtent;
+  final cursor;
 
   @override
   _ScaleAnimatorState createState() => _ScaleAnimatorState();
@@ -37,6 +39,7 @@ class _ScaleAnimatorState extends State<ScaleAnimator>
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
+      cursor: widget.cursor,
       onEnter: (e) {
         _controller.forward();
       },

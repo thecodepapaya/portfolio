@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:portfolio/404.dart';
-import 'package:portfolio/style/colours.dart';
 import 'package:portfolio/generated/l10n.dart';
-import 'package:portfolio/home_page.dart';
-import 'package:portfolio/style/text_demo.dart';
+import 'package:portfolio/routes.dart';
 import 'package:portfolio/style/app_theme.dart';
+import 'package:portfolio/style/colours.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());
@@ -37,14 +35,7 @@ class MyApp extends StatelessWidget {
         textTheme: PortfolioTheme.textTheme(context),
         iconTheme: PortfolioTheme.iconTheme(context),
       ),
-      routes: {
-        '/': (_) => HomePage(),
-        HomePage.route: (_) => HomePage(),
-        TextDemo.route: (_) => TextDemo(),
-      },
-      onUnknownRoute: (setting) {
-        return MaterialPageRoute(builder: (_) => NotFound404());
-      },
+      onGenerateRoute: onGenerateRoute,
       initialRoute: '/',
     );
   }

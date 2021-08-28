@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/about/about.dart';
 import 'package:portfolio/about/tabs.dart';
-import 'package:portfolio/achievements/achievements.dart';
+import 'package:portfolio/blogs/blogs.dart';
 import 'package:portfolio/components/left_sider.dart';
 import 'package:portfolio/components/right_sider.dart';
 import 'package:portfolio/constants.dart';
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
 
   GlobalKey projectKey = GlobalKey();
   GlobalKey experienceKey = GlobalKey();
-  GlobalKey achievementKey = GlobalKey();
+  GlobalKey blogKey = GlobalKey();
 
   List<TabData> tabData = [];
 
@@ -41,8 +41,8 @@ class _HomePageState extends State<HomePage> {
         tabName: S.of(context).tabExperience,
       ),
       TabData(
-        globalKey: achievementKey,
-        tabName: S.of(context).tabAchievements,
+        globalKey: blogKey,
+        tabName: S.of(context).tabBlog,
       ),
     ];
   }
@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                   VisibilityDetector(
                     key: Key(tabData[2].tabName),
-                    child: Achievements(key: achievementKey),
-                    onVisibilityChanged: achievementVisibility,
+                    child: Blogs(key: blogKey),
+                    onVisibilityChanged: blogVisibility,
                   ),
                   SizedBox(height: Constants.aboutBottomPadding),
                 ],
@@ -91,16 +91,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   child: Text("T"),
-      //   onPressed: () {
-      //     Scrollable.ensureVisible(
-      //       _experienceKey.currentContext!,
-      //       duration: Duration(seconds: 1),
-      //       curve: Curves.fastLinearToSlowEaseIn,
-      //     );
-      //   },
-      // ),
     );
   }
 
@@ -124,7 +114,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  void achievementVisibility(VisibilityInfo visibility) {
+  void blogVisibility(VisibilityInfo visibility) {
     final visiblePercentage = visibility.visibleFraction * 100;
     if (visiblePercentage > 50) {
       setAllFalse();

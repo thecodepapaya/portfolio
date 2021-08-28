@@ -21,18 +21,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "NotFound404":
-            MessageLookupByLibrary.simpleMessage("Looks like you are lost"),
         "aboutDesc": MessageLookupByLibrary.simpleMessage(
             "I\'m a Staff Software Engineer currently working as Tech Lead of the Doc Squad at Algolia. I mostly do front-end development, and I\'m a Vue.js and CSS nerd. I can\'t shut up about test-driven development and utility-first CSS. I also host the Developer Experience podcast, and share what I learn on my blog frontstuff.io, or at meetups and conferences."),
         "aboutGreeting": MessageLookupByLibrary.simpleMessage("I\'m"),
         "leftSider": MessageLookupByLibrary.simpleMessage(
             "c Designed and created by Ashutosh Singh"),
+        "notFoundDespise": MessageLookupByLibrary.simpleMessage(
+            "Looks like you are lost ... on a single page application :|"),
+        "notFoundHome":
+            MessageLookupByLibrary.simpleMessage("Take me back to 127.0.0.1"),
+        "notFoundInterjaction": MessageLookupByLibrary.simpleMessage("Oh no!"),
         "rightSider":
             MessageLookupByLibrary.simpleMessage("Made with love and Flutter"),
-        "tabAchievements": MessageLookupByLibrary.simpleMessage("Achievements"),
-        "tabExperience": MessageLookupByLibrary.simpleMessage("Experience"),
-        "tabProjects": MessageLookupByLibrary.simpleMessage("Projects"),
+        "tabBlog": MessageLookupByLibrary.simpleMessage("03.  Blogs"),
+        "tabExperience":
+            MessageLookupByLibrary.simpleMessage("02.  Experience"),
+        "tabProjects": MessageLookupByLibrary.simpleMessage("01.  Projects"),
         "title": MessageLookupByLibrary.simpleMessage("Ashutosh Singh")
       };
 }

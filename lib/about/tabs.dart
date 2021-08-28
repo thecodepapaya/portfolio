@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/scale_animator.dart';
 
-class Tabs extends StatelessWidget {
+class Tabs extends StatefulWidget {
   const Tabs({
     Key? key,
     required this.tabData,
@@ -9,31 +10,48 @@ class Tabs extends StatelessWidget {
   final List<TabData> tabData;
 
   @override
+  _TabsState createState() => _TabsState();
+}
+
+class _TabsState extends State<Tabs> {
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: tabData
+      children: widget.tabData
           .map((d) => tab(d.tabName, d.globalKey, d.isSelected))
           .toList(),
     );
   }
 
   Widget tab(String text, GlobalKey key, bool isSelected) {
-    return TextButton(
-      // style: isSelected ? TextButtonTheme(data: data, child: child) : ButtonStyle(),
-      style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.resolveWith<Color>((states) {
-          return isSelected ? Colors.red : Colors.yellow;
-        }),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GestureDetector(
+        onTap: () {
+          Scrollable.ensureVisible(
+            key.currentContext!,
+            duration: Duration(seconds: 1),
+            curve: Curves.easeInOut,
+          );
+        },
+        child: ScaleAnimator(
+          scaleExtent: 1.2,
+          cursor: SystemMouseCursors.click,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                text,
+                style: TextStyle(
+                  color: isSelected ? Colors.white : null,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
-      child: Text(text),
-      onPressed: () {
-        Scrollable.ensureVisible(
-          key.currentContext!,
-          duration: Duration(seconds: 1),
-          curve: Curves.easeInOut,
-        );
-      },
     );
   }
 }

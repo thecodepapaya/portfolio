@@ -50,11 +50,31 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Looks like you are lost`
-  String get NotFound404 {
+  /// `Oh no!`
+  String get notFoundInterjaction {
     return Intl.message(
-      'Looks like you are lost',
-      name: 'NotFound404',
+      'Oh no!',
+      name: 'notFoundInterjaction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Looks like you are lost ... on a single page application :|`
+  String get notFoundDespise {
+    return Intl.message(
+      'Looks like you are lost ... on a single page application :|',
+      name: 'notFoundDespise',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Take me back to 127.0.0.1`
+  String get notFoundHome {
+    return Intl.message(
+      'Take me back to 127.0.0.1',
+      name: 'notFoundHome',
       desc: '',
       args: [],
     );
@@ -100,30 +120,30 @@ class S {
     );
   }
 
-  /// `Achievements`
-  String get tabAchievements {
+  /// `03.  Blogs`
+  String get tabBlog {
     return Intl.message(
-      'Achievements',
-      name: 'tabAchievements',
+      '03.  Blogs',
+      name: 'tabBlog',
       desc: '',
       args: [],
     );
   }
 
-  /// `Experience`
+  /// `02.  Experience`
   String get tabExperience {
     return Intl.message(
-      'Experience',
+      '02.  Experience',
       name: 'tabExperience',
       desc: '',
       args: [],
     );
   }
 
-  /// `Projects`
+  /// `01.  Projects`
   String get tabProjects {
     return Intl.message(
-      'Projects',
+      '01.  Projects',
       name: 'tabProjects',
       desc: '',
       args: [],
