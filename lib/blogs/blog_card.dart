@@ -23,7 +23,8 @@ class BlogCard extends StatelessWidget {
         launch(data.url);
       },
       child: PortfolioCard(
-        cursor: SystemMouseCursors.click,
+        //TODO: Change to click when at least one blogs is up
+        cursor: SystemMouseCursors.forbidden,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,

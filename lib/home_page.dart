@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/about/about.dart';
 import 'package:portfolio/about/tabs.dart';
 import 'package:portfolio/blogs/blogs.dart';
-import 'package:portfolio/components/left_sider.dart';
-import 'package:portfolio/components/right_sider.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/experience/experience.dart';
 import 'package:portfolio/generated/l10n.dart';
@@ -50,46 +48,41 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          // RotatedBox(
-          //   quarterTurns: 3,
-          //   child: LeftSider(),
-          // ),
-          SizedBox(width: Constants.homeHorizontalPadding),
-          Expanded(child: About(tabData: tabData)),
-          Expanded(
-            child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              controller: _controller,
-              child: Column(
-                children: [
-                  VisibilityDetector(
-                    key: Key(tabData[0].tabName),
-                    child: Projects(key: projectKey),
-                    onVisibilityChanged: projectVisibility,
-                  ),
-                  VisibilityDetector(
-                    key: Key(tabData[1].tabName),
-                    child: Experience(key: experienceKey),
-                    onVisibilityChanged: experienceVisibility,
-                  ),
-                  VisibilityDetector(
-                    key: Key(tabData[2].tabName),
-                    child: Blogs(key: blogKey),
-                    onVisibilityChanged: blogVisibility,
-                  ),
-                  SizedBox(height: Constants.aboutBottomPadding),
-                ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            SizedBox(width: Constants.homeHorizontalPadding),
+            Expanded(child: About(tabData: tabData)),
+            Expanded(
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                controller: _controller,
+                child: Column(
+                  children: [
+                    VisibilityDetector(
+                      key: Key(tabData[0].tabName),
+                      child: Projects(key: projectKey),
+                      onVisibilityChanged: projectVisibility,
+                    ),
+                    VisibilityDetector(
+                      key: Key(tabData[1].tabName),
+                      child: Experience(key: experienceKey),
+                      onVisibilityChanged: experienceVisibility,
+                    ),
+                    VisibilityDetector(
+                      key: Key(tabData[2].tabName),
+                      child: Blogs(key: blogKey),
+                      onVisibilityChanged: blogVisibility,
+                    ),
+                    SizedBox(height: Constants.aboutBottomPadding),
+                  ],
+                ),
               ),
             ),
-          ),
-          SizedBox(width: Constants.homeHorizontalPadding),
-          // RotatedBox(
-          //   quarterTurns: 1,
-          //   child: RightSider(),
-          // ),
-        ],
+            SizedBox(width: Constants.homeHorizontalPadding),
+          ],
+        ),
       ),
     );
   }

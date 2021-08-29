@@ -47,19 +47,14 @@ class Contact extends StatelessWidget {
   }
 
   Widget contactIcon({required IconData iconData, required String url}) {
-    return Column(
-      children: [
-        SizedBox(width: 5),
-        IconButton(
-          onPressed: () {
-            launch(url);
-          },
-          icon: FaIcon(
-            iconData,
-            size: iconSize,
-          ),
-        ),
-      ],
+    return IconButton(
+      onPressed: () {
+        launch(url);
+      },
+      icon: FaIcon(
+        iconData,
+        size: iconSize,
+      ),
     );
   }
 }

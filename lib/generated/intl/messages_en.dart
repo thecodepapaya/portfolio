@@ -34,15 +34,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor\'s degree majoring in computer science from Indian Institiute of Information Technology, Vadodara."),
         "aboutGreeting": m0,
         "blogMin": MessageLookupByLibrary.simpleMessage("Min"),
-        "leftSider": MessageLookupByLibrary.simpleMessage(
-            "c Designed and created by Ashutosh Singh"),
+        "footerCredit": MessageLookupByLibrary.simpleMessage(
+            "Based on designs by Nicolas Meuzard"),
         "notFoundDespise": MessageLookupByLibrary.simpleMessage(
             "Looks like you are lost ... on a single page application, duh!"),
         "notFoundHome":
             MessageLookupByLibrary.simpleMessage("Take me back to 127.0.0.1"),
         "notFoundInterjaction": MessageLookupByLibrary.simpleMessage("Oh no!"),
-        "rightSider":
-            MessageLookupByLibrary.simpleMessage("Made with love and Flutter"),
         "tabBlog": MessageLookupByLibrary.simpleMessage("03.  Blogs"),
         "tabExperience":
             MessageLookupByLibrary.simpleMessage("02.  Experience"),

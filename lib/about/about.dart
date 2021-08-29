@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/about/contact.dart';
 import 'package:portfolio/about/tabs.dart';
+import 'package:portfolio/components/footer.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/generated/l10n.dart';
 
@@ -29,7 +30,7 @@ class About extends StatelessWidget {
         Constants.aboutLeftPadding,
         Constants.aboutTopPadding,
         Constants.aboutRightPadding,
-        Constants.aboutBottomPadding,
+        0,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,7 +49,12 @@ class About extends StatelessWidget {
             ],
           ),
           Tabs(tabData: tabData),
-          const Contact(),
+          Column(
+            children: [
+              const Contact(),
+              Footer(),
+            ],
+          ),
         ],
       ),
     );

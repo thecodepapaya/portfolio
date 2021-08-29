@@ -77,11 +77,21 @@ class S {
     );
   }
 
-  /// `c Designed and created by Ashutosh Singh`
-  String get leftSider {
+  /// `Min`
+  String get blogMin {
     return Intl.message(
-      'c Designed and created by Ashutosh Singh',
-      name: 'leftSider',
+      'Min',
+      name: 'blogMin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Based on designs by Nicolas Meuzard`
+  String get footerCredit {
+    return Intl.message(
+      'Based on designs by Nicolas Meuzard',
+      name: 'footerCredit',
       desc: '',
       args: [],
     );
@@ -112,16 +122,6 @@ class S {
     return Intl.message(
       'Oh no!',
       name: 'notFoundInterjaction',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Made with love and Flutter`
-  String get rightSider {
-    return Intl.message(
-      'Made with love and Flutter',
-      name: 'rightSider',
       desc: '',
       args: [],
     );
@@ -162,16 +162,6 @@ class S {
     return Intl.message(
       'Ashutosh Singh',
       name: 'title',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Min`
-  String get blogMin {
-    return Intl.message(
-      'Min',
-      name: 'blogMin',
       desc: '',
       args: [],
     );
