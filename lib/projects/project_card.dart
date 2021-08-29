@@ -46,7 +46,7 @@ class ProjectCard extends StatelessWidget {
               IconButton(
                 icon: FaIcon(
                   FontAwesomeIcons.github,
-                  size: Constants.faIconSizeCard,
+                  size: Constants.faIconSizeCard + 2,
                   color: ColorPalette.dullWhite,
                 ),
                 padding: EdgeInsets.zero,
