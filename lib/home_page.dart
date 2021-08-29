@@ -52,9 +52,13 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            SizedBox(width: Constants.homeHorizontalPadding),
-            Expanded(child: About(tabData: tabData)),
-            Expanded(
+            Expanded(child: Container()),
+            SizedBox(
+              width: Constants.halfScreenWidth,
+              child: About(tabData: tabData),
+            ),
+            SizedBox(
+              width: Constants.halfScreenWidth,
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 controller: _controller,
@@ -80,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(width: Constants.homeHorizontalPadding),
+            Expanded(child: Container()),
           ],
         ),
       ),

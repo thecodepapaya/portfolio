@@ -1,5 +1,5 @@
 class Constants {
-  static const double homeHorizontalPadding = 250.0;
+  static const double halfScreenWidth = 700.0;
 
   static const double aboutTopPadding = 120.0;
   static const double aboutBottomPadding = 120.0;
@@ -16,3 +16,8 @@ class Constants {
   static const double cardPaddingHori = 30;
   static const double cardIconSplash = 25;
 }
+
+
+// class Breakpoints{
+  
+// }
