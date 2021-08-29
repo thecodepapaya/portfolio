@@ -19,7 +19,8 @@
   <meta name="description" content="Portfolio website Ashutosh Singh">
 
   <meta property="og:title" content="Ashutosh Singh">
-  <meta property="og:image" content="https://user-images.githubusercontent.com/42690541/131256227-917d692e-78d5-41a4-b803-a93da50d72da.png">
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/42690541/131256227-917d692e-78d5-41a4-b803-a93da50d72da.png">
   <meta property="og:description" content="Portfolio website Ashutosh Singh">
   <meta property="og:url" content="https://thecodepapaya.me">
   <meta property="og:type" content="website" />
@@ -35,6 +36,9 @@
 
   <title>Ashutosh Singh</title>
   <link rel="manifest" href="manifest.json">
+
+  <script src="jquery-2.1.4.js"></script>
+
 </head>
 
 <body>
@@ -105,5 +109,14 @@
       loadMainDartJs();
     }
   </script>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
 </body>
+
 </html>
