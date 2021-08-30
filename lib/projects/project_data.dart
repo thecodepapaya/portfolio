@@ -1,3 +1,5 @@
+import 'package:portfolio/utils/constants.dart';
+
 class ProjectData {
   ProjectData({
     required this.title,
@@ -5,7 +7,7 @@ class ProjectData {
     required this.gitHub,
     required this.link,
     this.technologies = const [],
-  }) : assert(description.length < 120);
+  }) : assert(description.length < Constants.charLimitCardDesc);
 
   final String title;
   final String description;

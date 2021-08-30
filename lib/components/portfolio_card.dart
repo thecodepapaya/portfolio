@@ -24,7 +24,7 @@ class PortfolioCard extends StatelessWidget {
             vertical: Constants.cardPaddingVert,
             horizontal: Constants.cardPaddingHori,
           ),
-          width: Constants.cardAspectRatio * Constants.cardHeight,
+          width: Constants.cardAspectRatioDesktop * Constants.cardHeight,
           height: Constants.cardHeight,
           child: child,
         ),

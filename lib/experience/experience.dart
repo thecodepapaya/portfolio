@@ -30,7 +30,7 @@ class Experience extends StatelessWidget {
       children: [
         SizedBox(height: Constants.cardTitleSpacing),
         GridView.count(
-          childAspectRatio: Constants.cardAspectRatio,
+          childAspectRatio: Constants.cardAspectRatioTablet,
           mainAxisSpacing: Constants.cardSpacing,
           crossAxisSpacing: Constants.cardSpacing,
           shrinkWrap: true,
@@ -56,8 +56,7 @@ final data = [
   ExperienceData(
     organizationName: "Some Company",
     position: "SDE",
-    description:
-        "I worked on x with y to achieve z without doing p or q. I worked on x with y to achieve z without doing p or q.",
+    description: "I worked on x with y to achieve z without doing p or q.",
     startYearMonth: "Aug 21",
     endYearMonth: "Present",
   ),

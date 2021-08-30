@@ -33,9 +33,17 @@ class ExperienceCard extends StatelessWidget {
               CardTag(tag: data.position),
             ],
           ),
-          Text(data.organizationName,
-              style: Theme.of(context).textTheme.headline6),
-          Text(data.description),
+          Text(
+            data.organizationName,
+            style: Theme.of(context).textTheme.headline6,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+          Text(
+            data.description,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

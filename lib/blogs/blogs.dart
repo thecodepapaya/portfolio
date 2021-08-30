@@ -30,7 +30,7 @@ class Blogs extends StatelessWidget {
       children: [
         SizedBox(height: Constants.cardTitleSpacing),
         GridView.count(
-          childAspectRatio: Constants.cardAspectRatio,
+          childAspectRatio: Constants.cardAspectRatioTablet,
           mainAxisSpacing: Constants.cardSpacing,
           crossAxisSpacing: Constants.cardSpacing,
           shrinkWrap: true,

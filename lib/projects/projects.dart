@@ -30,7 +30,7 @@ class Projects extends StatelessWidget {
       children: [
         SizedBox(height: Constants.cardTitleSpacing),
         GridView.count(
-          childAspectRatio: Constants.cardAspectRatio,
+          childAspectRatio: Constants.cardAspectRatioTablet,
           mainAxisSpacing: Constants.cardSpacing,
           crossAxisSpacing: Constants.cardSpacing,
           shrinkWrap: true,
@@ -56,7 +56,7 @@ final data = [
   ProjectData(
     title: "Sweet title",
     description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
+        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog. The quick brown fox jumped",
     gitHub: "",
     link: "",
     technologies: ["Flutter", "Firebase"],

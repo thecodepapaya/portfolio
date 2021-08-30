@@ -13,7 +13,7 @@ void main() {
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
     ScreenBreakpoints(
       desktop: (Constants.halfScreenWidth + Constants.globalPadding) * 2,
-      tablet: 1024,
+      tablet: 880,
       watch: 200,
     ),
   );

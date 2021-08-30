@@ -1,3 +1,5 @@
+import 'package:portfolio/utils/constants.dart';
+
 class ExperienceData {
   ExperienceData({
     required this.organizationName,
@@ -5,7 +7,7 @@ class ExperienceData {
     required this.description,
     required this.startYearMonth,
     required this.endYearMonth,
-  }) : assert(description.length < 120);
+  }) : assert(description.length < Constants.charLimitCardDesc);
 
   final String organizationName;
   final String position;
