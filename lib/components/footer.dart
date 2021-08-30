@@ -34,7 +34,7 @@ class Footer extends StatelessWidget {
 
   Widget tabletView(BuildContext context) {
     return Container(
-      height: Constants.cardTitleSpacing * 3,
+      height: Constants.cardTitleSpacingTablet * 3,
       alignment: Alignment.bottomCenter,
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
@@ -50,7 +50,7 @@ class Footer extends StatelessWidget {
 
   Widget mobileView(BuildContext context) {
     return Container(
-      height: Constants.aboutDesktopBottomPadding,
+      height: Constants.cardTitleSpacingMobile * 3,
       alignment: Alignment.bottomCenter,
       child: MouseRegion(
         cursor: SystemMouseCursors.click,

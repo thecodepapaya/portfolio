@@ -32,5 +32,9 @@ class Constants {
   // Tablet Card
   static const double cardAspectRatioTablet = 2.2;
   static const double cardSpacing = 10;
-  static const double cardTitleSpacing = 15;
+  static const double cardTitleSpacingTablet = 15;
+
+  // Mobile Card
+  static const double cardTitleSpacingMobile = 10;
+  static const double cardAspectRatioMobile = 2;
 }

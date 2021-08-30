@@ -29,7 +29,7 @@ class About extends StatelessWidget {
     return ScreenTypeLayout(
       desktop: desktopView(context),
       tablet: tabletView(context),
-      mobile: mobileView(),
+      mobile: mobileView(context),
     );
   }
 
@@ -82,13 +82,19 @@ class About extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(S.of(context).aboutGreeting(dayTime()),
-                  style: Theme.of(context).textTheme.headline3),
-              Text(S.of(context).title + '.',
-                  style: Theme.of(context).textTheme.headline1),
+              Text(
+                S.of(context).aboutGreeting(dayTime()),
+                style: Theme.of(context).textTheme.headline3,
+              ),
+              Text(
+                S.of(context).title + '.',
+                style: Theme.of(context).textTheme.headline1,
+              ),
               SizedBox(height: 40),
-              Text(S.of(context).aboutDesc,
-                  style: Theme.of(context).textTheme.subtitle1),
+              Text(
+                S.of(context).aboutDesc,
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
             ],
           ),
           SizedBox(height: 80),
@@ -98,7 +104,42 @@ class About extends StatelessWidget {
     );
   }
 
-  Widget mobileView() {
-    return Container();
+  Widget mobileView(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+        Constants.aboutTabletLeftPadding,
+        Constants.aboutTabletTopPadding,
+        Constants.aboutTabletRightPadding,
+        Constants.aboutTabletBottomPadding,
+      ),
+      child: Column(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              FittedBox(
+                child: Text(
+                  S.of(context).aboutGreeting(dayTime()),
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              ),
+              FittedBox(
+                child: Text(
+                  S.of(context).title + '.',
+                  style: Theme.of(context).textTheme.headline1,
+                ),
+              ),
+              SizedBox(height: 40),
+              Text(
+                S.of(context).aboutDesc,
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+            ],
+          ),
+          SizedBox(height: 80),
+          FittedBox(child: Contact()),
+        ],
+      ),
+    );
   }
 }

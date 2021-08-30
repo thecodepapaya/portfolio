@@ -5,6 +5,7 @@ import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/projects/project_data.dart';
 import 'package:portfolio/components/card_tag.dart';
 import 'package:portfolio/style/colours.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -46,7 +47,12 @@ class ProjectCard extends StatelessWidget {
           ),
           Text(
             data.description,
-            maxLines: 3,
+            maxLines: getValueForScreenType<int>(
+              context: context,
+              mobile: 4,
+              tablet: 3,
+              desktop: 2,
+            ),
             overflow: TextOverflow.ellipsis,
           ),
           Row(

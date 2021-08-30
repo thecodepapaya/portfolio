@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
         child: ScreenTypeLayout(
           desktop: desktopView(),
           tablet: tabletView(context),
-          mobile: mobileView(),
+          mobile: mobileView(context),
         ),
       ),
     );
@@ -147,8 +147,50 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget mobileView() {
-    return Text("mobile");
+  Widget mobileView(BuildContext context) {
+    return SingleChildScrollView(
+      physics: BouncingScrollPhysics(),
+      child: Column(
+        children: [
+          About(tabData: tabData),
+          SizedBox(height: 50),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(Constants.cardMargin),
+              child: Text(
+                S.of(context).tabProjects,
+                style: Theme.of(context).textTheme.headline5,
+              ),
+            ),
+          ),
+          Projects(),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(Constants.cardMargin),
+              child: Text(
+                S.of(context).tabExperience,
+                style: Theme.of(context).textTheme.headline5,
+              ),
+            ),
+          ),
+          Experience(),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(Constants.cardMargin),
+              child: Text(
+                S.of(context).tabBlog,
+                style: Theme.of(context).textTheme.headline5,
+              ),
+            ),
+          ),
+          Blogs(),
+          Footer(),
+        ],
+      ),
+    );
   }
 
   void projectVisibility(VisibilityInfo visibility) {

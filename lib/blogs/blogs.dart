@@ -28,7 +28,7 @@ class Blogs extends StatelessWidget {
   Widget tabletView() {
     return Column(
       children: [
-        SizedBox(height: Constants.cardTitleSpacing),
+        SizedBox(height: Constants.cardTitleSpacingTablet),
         GridView.count(
           childAspectRatio: Constants.cardAspectRatioTablet,
           mainAxisSpacing: Constants.cardSpacing,
@@ -37,13 +37,19 @@ class Blogs extends StatelessWidget {
           crossAxisCount: 2,
           children: data.map((d) => BlogCard(data: d)).toList(),
         ),
-        SizedBox(height: Constants.cardTitleSpacing * 3),
+        SizedBox(height: Constants.cardTitleSpacingTablet * 3),
       ],
     );
   }
 
   Widget mobileView() {
-    return Container();
+    return Column(
+      children: [
+        SizedBox(height: Constants.cardTitleSpacingMobile),
+        ...data.map((d) => BlogCard(data: d)).toList(),
+        SizedBox(height: Constants.cardTitleSpacingTablet * 3),
+      ],
+    );
   }
 }
 

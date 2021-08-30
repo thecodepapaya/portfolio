@@ -38,13 +38,15 @@ class _NotFound404State extends State<NotFound404> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                S.of(context).notFoundInterjaction,
+                S.of(context).notFoundInterjaction +
+                    "\n\n" +
+                    S.of(context).notFoundDespise,
                 style: textStyle,
               ),
-              Text(
-                S.of(context).notFoundDespise,
-                style: textStyle,
-              ),
+              // Text(
+              //   S.of(context).notFoundDespise,
+              //   style: textStyle,
+              // ),
               MouseRegion(
                 onEnter: (e) {
                   setState(() {

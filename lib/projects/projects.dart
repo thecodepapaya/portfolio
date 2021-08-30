@@ -28,7 +28,7 @@ class Projects extends StatelessWidget {
   Widget tabletView() {
     return Column(
       children: [
-        SizedBox(height: Constants.cardTitleSpacing),
+        SizedBox(height: Constants.cardTitleSpacingTablet),
         GridView.count(
           childAspectRatio: Constants.cardAspectRatioTablet,
           mainAxisSpacing: Constants.cardSpacing,
@@ -37,7 +37,7 @@ class Projects extends StatelessWidget {
           crossAxisCount: 2,
           children: data.map((d) => ProjectCard(data: d)).toList(),
         ),
-        SizedBox(height: Constants.cardTitleSpacing * 3),
+        SizedBox(height: Constants.cardTitleSpacingTablet * 3),
       ],
     );
   }
@@ -45,8 +45,9 @@ class Projects extends StatelessWidget {
   Widget mobileView() {
     return Column(
       children: [
-        // SizedBox(height: Constants.aboutTopPadding),
+        SizedBox(height: Constants.cardTitleSpacingTablet),
         ...data.map((d) => ProjectCard(data: d)).toList(),
+        SizedBox(height: Constants.cardTitleSpacingTablet * 3),
       ],
     );
   }
