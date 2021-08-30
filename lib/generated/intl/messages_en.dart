@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "aboutDesc": MessageLookupByLibrary.simpleMessage(
             "I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor\'s degree majoring in computer science from Indian Institiute of Information Technology, Vadodara."),
         "aboutGreeting": m0,
-        "blogMin": MessageLookupByLibrary.simpleMessage("Min"),
+        "blogMinutes": MessageLookupByLibrary.simpleMessage("Min"),
         "footerCredit": MessageLookupByLibrary.simpleMessage(
             "Based on designs by Nicolas Meuzard"),
         "notFoundDespise": MessageLookupByLibrary.simpleMessage(

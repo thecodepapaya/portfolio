@@ -78,10 +78,10 @@ class S {
   }
 
   /// `Min`
-  String get blogMin {
+  String get blogMinutes {
     return Intl.message(
       'Min',
-      name: 'blogMin',
+      name: 'blogMinutes',
       desc: '',
       args: [],
     );

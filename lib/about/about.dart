@@ -113,6 +113,7 @@ class About extends StatelessWidget {
         Constants.aboutTabletBottomPadding,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

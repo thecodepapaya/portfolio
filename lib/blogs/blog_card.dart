@@ -65,7 +65,7 @@ class BlogCard extends StatelessWidget {
                 ),
                 SizedBox(width: 8),
                 Text("${data.read} "),
-                Text(S.of(context).blogMin),
+                Text(S.of(context).blogMinutes),
               ],
             ),
           ],

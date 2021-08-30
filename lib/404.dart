@@ -43,10 +43,6 @@ class _NotFound404State extends State<NotFound404> {
                     S.of(context).notFoundDespise,
                 style: textStyle,
               ),
-              // Text(
-              //   S.of(context).notFoundDespise,
-              //   style: textStyle,
-              // ),
               MouseRegion(
                 onEnter: (e) {
                   setState(() {

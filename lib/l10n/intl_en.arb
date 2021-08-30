@@ -1,7 +1,7 @@
 {
     "aboutDesc": "I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor's degree majoring in computer science from Indian Institiute of Information Technology, Vadodara.",
     "aboutGreeting": "{greeting, select, em {Good morning, early bird} m {Good Morning} a {Good Afternoon} e {Good Evening} n {Hi there, night owl} other {Hello}}. I'm ",
-    "blogMin": "Min",
+    "blogMinutes": "Min",
     "footerCredit": "Based on designs by Nicolas Meuzard",
     "notFoundDespise": "Looks like you are lost ... on a single page application, duh!",
     "notFoundHome": "Take me back to 127.0.0.1",
