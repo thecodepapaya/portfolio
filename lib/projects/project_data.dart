@@ -5,7 +5,7 @@ class ProjectData {
     required this.gitHub,
     required this.link,
     this.technologies = const [],
-  });
+  }) : assert(description.length < 120);
 
   final String title;
   final String description;

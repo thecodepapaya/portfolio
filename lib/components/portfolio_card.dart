@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/scale_animator.dart';
-import 'package:portfolio/constants.dart';
+import 'package:portfolio/utils/constants.dart';
 
 class PortfolioCard extends StatelessWidget {
   const PortfolioCard({

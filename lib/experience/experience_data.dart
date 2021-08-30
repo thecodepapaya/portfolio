@@ -5,7 +5,7 @@ class ExperienceData {
     required this.description,
     required this.startYearMonth,
     required this.endYearMonth,
-  });
+  }) : assert(description.length < 120);
 
   final String organizationName;
   final String position;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/scale_animator.dart';
 import 'package:portfolio/generated/l10n.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class NotFound404 extends StatefulWidget {
   const NotFound404({Key? key}) : super(key: key);
@@ -14,9 +15,23 @@ class _NotFound404State extends State<NotFound404> {
 
   @override
   Widget build(BuildContext context) {
+    var textStyle = getValueForScreenType<TextStyle>(
+      context: context,
+      mobile: Theme.of(context).textTheme.headline4!,
+      tablet: Theme.of(context).textTheme.headline2,
+      desktop: Theme.of(context).textTheme.headline1,
+    );
+
+    var padding = getValueForScreenType<EdgeInsets>(
+      context: context,
+      mobile: EdgeInsets.symmetric(vertical: 150, horizontal: 50),
+      tablet: EdgeInsets.symmetric(vertical: 100, horizontal: 150),
+      desktop: EdgeInsets.symmetric(vertical: 100, horizontal: 250),
+    );
+
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(250.0),
+        padding: padding,
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,11 +39,11 @@ class _NotFound404State extends State<NotFound404> {
             children: [
               Text(
                 S.of(context).notFoundInterjaction,
-                style: Theme.of(context).textTheme.headline1,
+                style: textStyle,
               ),
               Text(
                 S.of(context).notFoundDespise,
-                style: Theme.of(context).textTheme.headline1,
+                style: textStyle,
               ),
               MouseRegion(
                 onEnter: (e) {

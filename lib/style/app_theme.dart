@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/style/colours.dart';
+import 'package:portfolio/utils/constants.dart';
 
 class PortfolioTheme {
   static TextTheme textTheme(BuildContext context) {
@@ -48,7 +49,7 @@ class PortfolioTheme {
 
   static CardTheme cardTheme(BuildContext context) {
     return CardTheme(
-      margin: EdgeInsets.all(4),
+      margin: EdgeInsets.all(Constants.cardMargin),
       elevation: 12,
       color: ColorPalette.backgroundLight,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),

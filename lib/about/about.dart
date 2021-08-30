@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/about/contact.dart';
 import 'package:portfolio/about/tabs.dart';
 import 'package:portfolio/components/footer.dart';
-import 'package:portfolio/constants.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/generated/l10n.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class About extends StatelessWidget {
   const About({
@@ -25,11 +26,19 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ScreenTypeLayout(
+      desktop: desktopView(context),
+      tablet: tabletView(context),
+      mobile: mobileView(),
+    );
+  }
+
+  Widget desktopView(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(
-        Constants.aboutLeftPadding,
-        Constants.aboutTopPadding,
-        Constants.aboutRightPadding,
+        Constants.aboutDesktopLeftPadding,
+        Constants.aboutDesktopTopPadding,
+        Constants.aboutDesktopRightPadding,
         0,
       ),
       child: Column(
@@ -58,5 +67,38 @@ class About extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget tabletView(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+        Constants.aboutTabletLeftPadding,
+        Constants.aboutTabletTopPadding,
+        Constants.aboutTabletRightPadding,
+        Constants.aboutTabletBottomPadding,
+      ),
+      child: Column(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(S.of(context).aboutGreeting(dayTime()),
+                  style: Theme.of(context).textTheme.headline3),
+              Text(S.of(context).title + '.',
+                  style: Theme.of(context).textTheme.headline1),
+              SizedBox(height: 40),
+              Text(S.of(context).aboutDesc,
+                  style: Theme.of(context).textTheme.subtitle1),
+            ],
+          ),
+          SizedBox(height: 80),
+          const Contact(),
+        ],
+      ),
+    );
+  }
+
+  Widget mobileView() {
+    return Container();
   }
 }

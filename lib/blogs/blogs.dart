@@ -1,19 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/blogs/blog_card.dart';
 import 'package:portfolio/blogs/blog_data.dart';
-import 'package:portfolio/constants.dart';
+import 'package:portfolio/utils/constants.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class Blogs extends StatelessWidget {
   const Blogs({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    return ScreenTypeLayout(
+      desktop: desktopView(),
+      tablet: tabletView(),
+      mobile: mobileView(),
+    );
+  }
+
+  Widget desktopView() {
     return Column(
       children: [
-        SizedBox(height: Constants.aboutTopPadding),
+        SizedBox(height: Constants.aboutDesktopTopPadding),
         ...data.map((d) => BlogCard(data: d)).toList(),
       ],
     );
+  }
+
+  Widget tabletView() {
+    return Column(
+      children: [
+        SizedBox(height: Constants.cardTitleSpacing),
+        GridView.count(
+          childAspectRatio: Constants.cardAspectRatio,
+          mainAxisSpacing: Constants.cardSpacing,
+          crossAxisSpacing: Constants.cardSpacing,
+          shrinkWrap: true,
+          crossAxisCount: 2,
+          children: data.map((d) => BlogCard(data: d)).toList(),
+        ),
+        SizedBox(height: Constants.cardTitleSpacing * 3),
+      ],
+    );
+  }
+
+  Widget mobileView() {
+    return Container();
   }
 }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/portfolio_card.dart';
-import 'package:portfolio/constants.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/experience/experience_data.dart';
 import 'package:portfolio/components/card_tag.dart';
 import 'package:portfolio/style/colours.dart';
