@@ -29,6 +29,10 @@ class _HomePageState extends State<HomePage> {
 
   List<TabData> tabData = [];
 
+  double projectPercent = 1;
+  double experiencePercent = 0;
+  double blogPercent = 0;
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -222,28 +226,34 @@ class _HomePageState extends State<HomePage> {
   }
 
   void projectVisibility(VisibilityInfo visibility) {
-    final visiblePercentage = visibility.visibleFraction * 100;
-    if (visiblePercentage > 50) {
+    projectPercent = visibility.visibleFraction;
+    handleChange();
+  }
+
+  void experienceVisibility(VisibilityInfo visibility) {
+    experiencePercent = visibility.visibleFraction;
+    handleChange();
+  }
+
+  void blogVisibility(VisibilityInfo visibility) {
+    blogPercent = visibility.visibleFraction;
+    handleChange();
+  }
+
+  void handleChange() {
+    if (projectPercent > experiencePercent && projectPercent > blogPercent) {
       setAllFalse();
       setState(() {
         tabData[0].isSelected = true;
       });
     }
-  }
-
-  void experienceVisibility(VisibilityInfo visibility) {
-    final visiblePercentage = visibility.visibleFraction * 100;
-    if (visiblePercentage > 50) {
+    if (experiencePercent > projectPercent && experiencePercent > blogPercent) {
       setAllFalse();
       setState(() {
         tabData[1].isSelected = true;
       });
     }
-  }
-
-  void blogVisibility(VisibilityInfo visibility) {
-    final visiblePercentage = visibility.visibleFraction * 100;
-    if (visiblePercentage > 50) {
+    if (blogPercent > experiencePercent && blogPercent > projectPercent) {
       setAllFalse();
       setState(() {
         tabData[2].isSelected = true;

@@ -55,24 +55,27 @@ class Experience extends StatelessWidget {
 
 final data = [
   ExperienceData(
-    organizationName: "Some Company",
-    position: "SDE",
-    description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "Aug 21",
-    endYearMonth: "Present",
-  ),
-  ExperienceData(
-    organizationName: "Some Company",
-    position: "Intern",
-    description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "Jul 20",
+    organizationName: "National Informatics Centre | Govt of India",
+    position: "Trainee",
+    description:
+        "Developed frontend components to house image processing utilities on NIC website. Integrated microservice APIs with Angular frontend.",
+    startYearMonth: "Jun 21",
     endYearMonth: "Jul 21",
   ),
   ExperienceData(
-    organizationName: "Some Company",
-    position: "Trainee",
-    description: "I worked on x with y to achieve z without doing p or q.",
-    startYearMonth: "Jun 19",
-    endYearMonth: "Jul 20",
+    organizationName: "Kowi Lifestyle Pvt Ltd",
+    position: "Full stack Developer",
+    description:
+        "Created company's core product from scratch. Wore different hats including SDE, DevOps and QA.",
+    startYearMonth: "May 21",
+    endYearMonth: "Jul 21",
+  ),
+  ExperienceData(
+    organizationName: "Blindside HB GmbH",
+    position: "Software Developer",
+    description:
+        "Worked on the company's core product to enhance UX, add backend connectivity and modularize existing code.",
+    startYearMonth: "Sep 20",
+    endYearMonth: "Nov 20",
   ),
 ];

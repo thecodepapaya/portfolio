@@ -36,11 +36,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "blogMinutes": MessageLookupByLibrary.simpleMessage("Min"),
         "footerCredit": MessageLookupByLibrary.simpleMessage(
             "Based on designs by Nicolas Meuzard"),
+        "footerPower":
+            MessageLookupByLibrary.simpleMessage("Powered by Flutter"),
         "notFoundDespise": MessageLookupByLibrary.simpleMessage(
             "Looks like you are lost ... on a single page application, duh!"),
         "notFoundHome":
             MessageLookupByLibrary.simpleMessage("Take me back to 127.0.0.1"),
-        "notFoundInterjaction": MessageLookupByLibrary.simpleMessage("Oh no!"),
+        "notFoundInterjection": MessageLookupByLibrary.simpleMessage("Oh no!"),
         "tabBlog": MessageLookupByLibrary.simpleMessage("03.  Blogs"),
         "tabExperience":
             MessageLookupByLibrary.simpleMessage("02.  Experience"),

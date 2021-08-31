@@ -58,33 +58,35 @@ class ProjectCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              IconButton(
-                icon: FaIcon(
-                  FontAwesomeIcons.github,
-                  size: Constants.faIconSizeCard + 2,
-                  color: ColorPalette.dullWhite,
+              if (data.gitHub.isNotEmpty)
+                IconButton(
+                  icon: FaIcon(
+                    FontAwesomeIcons.github,
+                    size: Constants.faIconSizeCard + 2,
+                    color: ColorPalette.dullWhite,
+                  ),
+                  padding: EdgeInsets.zero,
+                  constraints: BoxConstraints(minHeight: 0, minWidth: 0),
+                  splashRadius: Constants.cardIconSplash,
+                  onPressed: () {
+                    launch(data.gitHub);
+                  },
                 ),
-                padding: EdgeInsets.zero,
-                constraints: BoxConstraints(minHeight: 0, minWidth: 0),
-                splashRadius: Constants.cardIconSplash,
-                onPressed: () {
-                  launch(data.gitHub);
-                },
-              ),
-              SizedBox(width: 8),
-              IconButton(
-                icon: FaIcon(
-                  FontAwesomeIcons.externalLinkAlt,
-                  size: Constants.faIconSizeCard,
-                  color: ColorPalette.dullWhite,
+              if (data.link.isNotEmpty) SizedBox(width: 8),
+              if (data.link.isNotEmpty)
+                IconButton(
+                  icon: FaIcon(
+                    FontAwesomeIcons.externalLinkAlt,
+                    size: Constants.faIconSizeCard,
+                    color: ColorPalette.dullWhite,
+                  ),
+                  padding: EdgeInsets.zero,
+                  constraints: BoxConstraints(minHeight: 0, minWidth: 0),
+                  splashRadius: Constants.cardIconSplash,
+                  onPressed: () {
+                    launch(data.link);
+                  },
                 ),
-                padding: EdgeInsets.zero,
-                constraints: BoxConstraints(minHeight: 0, minWidth: 0),
-                splashRadius: Constants.cardIconSplash,
-                onPressed: () {
-                  launch(data.link);
-                },
-              ),
             ],
           ),
         ],

@@ -55,59 +55,36 @@ class Projects extends StatelessWidget {
 
 final data = [
   ProjectData(
-    title: "Sweet title",
+    title: "Udhari",
     description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog. The quick brown fox jumped",
-    gitHub: "",
-    link: "",
-    technologies: ["Flutter", "Firebase"],
+        "An intelligent money management solution for one’s daily expenditure. Published to Play Store and downloaded hundreds of times.",
+    gitHub: "https://github.com/thecodepapaya/udhari",
+    link:
+        "https://play.google.com/store/apps/details?id=com.thecodepapaya.udhari",
+    technologies: ["Flutter", "Django", "DRF", "Dart"],
   ),
   ProjectData(
-    title: "Sweet title",
+    title: "FASE - Post-covid attendance solution",
     description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
-    gitHub: "",
+        "A reliable WLAN and bluetooth based solution for attendance management in the institute in a post-covid era.",
+    gitHub: "https://github.com/thecodepapaya/fase-backend",
     link: "",
-    technologies: ["Flutter"],
+    technologies: ["Django", "DRF", "Flutter", "Python", "Dart"],
   ),
   ProjectData(
-    title: "Sweet title",
+    title: "show_up_animation",
     description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
-    gitHub: "",
-    link: "",
-    technologies: ["Flutter"],
+        "Flutter package to allow developers to integrate simple and clean animations into their apps with no boilerplate code.",
+    gitHub: "https://github.com/thecodepapaya/show_up_animation/",
+    link: "https://pub.dev/packages/show_up_animation",
+    technologies: ["Flutter", "Dart"],
   ),
   ProjectData(
-    title: "Sweet title",
+    title: "DevFest 2019 Gandhinagar Mobile App",
     description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
-    gitHub: "",
-    link: "",
-    technologies: ["Flutter"],
-  ),
-  ProjectData(
-    title: "Sweet title",
-    description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
-    gitHub: "",
-    link: "",
-    technologies: ["Flutter"],
-  ),
-  ProjectData(
-    title: "Sweet title",
-    description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
-    gitHub: "",
-    link: "",
-    technologies: ["Flutter"],
-  ),
-  ProjectData(
-    title: "Sweet title",
-    description:
-        "The quick brown fox jumped upon the lazy dog. The quick brown fox jumped upon the lazy dog.",
-    gitHub: "",
-    link: "",
-    technologies: ["Flutter"],
+        "Designed and developed Flutter application for 500+ attendees of DevFest GNR to relay event-related information.",
+    gitHub: "https://github.com/GDG-GANDHINAGAR/devfest-19-mobile",
+    link: "https://gdg.community.dev/gdg-gandhinagar/",
+    technologies: ["Flutter", "Firebase", "Dart"],
   ),
 ];

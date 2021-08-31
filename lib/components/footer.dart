@@ -23,7 +23,10 @@ class Footer extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          child: Text(S.of(context).footerCredit),
+          child: Text(S.of(context).footerCredit +
+              ". " +
+              S.of(context).footerPower +
+              "."),
           onTap: () {
             launch("https://dribbble.com/NicolasMzrd");
           },

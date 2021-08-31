@@ -97,6 +97,16 @@ class S {
     );
   }
 
+  /// `Powered by Flutter`
+  String get footerPower {
+    return Intl.message(
+      'Powered by Flutter',
+      name: 'footerPower',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Looks like you are lost ... on a single page application, duh!`
   String get notFoundDespise {
     return Intl.message(
@@ -118,10 +128,10 @@ class S {
   }
 
   /// `Oh no!`
-  String get notFoundInterjaction {
+  String get notFoundInterjection {
     return Intl.message(
       'Oh no!',
-      name: 'notFoundInterjaction',
+      name: 'notFoundInterjection',
       desc: '',
       args: [],
     );

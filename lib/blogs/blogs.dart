@@ -57,33 +57,33 @@ final data = [
   BlogData(
     title: "Deploying Flutter with Amazon EC2",
     description:
-        "Learn to get full controll of your projects by deplying to EC2 AWS",
+        "Learn to get full control of your projects by deploying to AWS EC2 instance.",
     tags: ['AWS', 'Flutter', 'Nodejs'],
-    url: "url",
+    url: "404",
     read: 3,
   ),
-  BlogData(
-    title: "Deploying Flutter with Amazon EC2",
-    description:
-        "Learn to get full controll of your projects by deplying to EC2 AWS",
-    tags: ['AWS', 'Flutter', 'Nodejs'],
-    url: "url",
-    read: 3,
-  ),
-  BlogData(
-    title: "Deploying Flutter with Amazon EC2",
-    description:
-        "Learn to get full controll of your projects by deplying to EC2 AWS",
-    tags: ['AWS', 'Flutter', 'Nodejs'],
-    url: "url",
-    read: 3,
-  ),
-  BlogData(
-    title: "Deploying Flutter with Amazon EC2",
-    description:
-        "Learn to get full controll of your projects by deplying to EC2 AWS",
-    tags: ['AWS', 'Flutter', 'Nodejs'],
-    url: "url",
-    read: 3,
-  ),
+  // BlogData(
+  //   title: "Deploying Flutter with Amazon EC2",
+  //   description:
+  //       "Learn to get full control of your projects by deploying to EC2 AWS",
+  //   tags: ['AWS', 'Flutter', 'Nodejs'],
+  //   url: "url",
+  //   read: 3,
+  // ),
+  // BlogData(
+  //   title: "Deploying Flutter with Amazon EC2",
+  //   description:
+  //       "Learn to get full control of your projects by deploying to EC2 AWS",
+  //   tags: ['AWS', 'Flutter', 'Nodejs'],
+  //   url: "url",
+  //   read: 3,
+  // ),
+  // BlogData(
+  //   title: "Deploying Flutter with Amazon EC2",
+  //   description:
+  //       "Learn to get full control of your projects by deploying to EC2 AWS",
+  //   tags: ['AWS', 'Flutter', 'Nodejs'],
+  //   url: "url",
+  //   read: 3,
+  // ),
 ];

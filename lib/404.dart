@@ -38,7 +38,7 @@ class _NotFound404State extends State<NotFound404> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                S.of(context).notFoundInterjaction +
+                S.of(context).notFoundInterjection +
                     "\n\n" +
                     S.of(context).notFoundDespise,
                 style: textStyle,
