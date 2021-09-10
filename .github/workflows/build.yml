@@ -22,6 +22,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Export Release Timestamp
+        run: echo "APP_VERSION=v$(date +'%Y.%m.%d.%H.%m.%S')" >> $GITHUB_ENV
+        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
@@ -37,4 +40,14 @@ jobs:
 #       - name: Run Tests
 #         run: flutter test
       - name: Build Web
-        run: flutter build web
+        run: |
+          flutter build web
+          cd build/web
+          zip -r web-app.zip .
+      - name: Release Web App
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ env.APP_VERSION }}
+          name: ${{ env.APP_VERSION }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: 'build/web/web-app.zip'
