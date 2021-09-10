@@ -60,7 +60,7 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    firebase.analytics();
   </script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
