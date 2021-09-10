@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/analytics.dart';
 import 'package:portfolio/components/scale_animator.dart';
 
 class Tabs extends StatefulWidget {
@@ -34,6 +35,7 @@ class _TabsState extends State<Tabs> {
             duration: Duration(seconds: 1),
             curve: Curves.easeInOut,
           );
+          PortfolioAnalytics.log(LogType.tabClick, property: text);
         },
         child: ScaleAnimator(
           scaleExtent: 1.2,

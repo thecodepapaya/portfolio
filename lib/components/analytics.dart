@@ -1,11 +1,24 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_analytics/observer.dart';
+
+enum LogType {
+  cardClick,
+  contactClick,
+  cardGitHubClick,
+  cardExternalLinkClick,
+  footerCreditClick,
+  tabClick,
+  home404Click,
+}
 
 class PortfolioAnalytics {
-  static late FirebaseAnalytics analytics;
-  static late FirebaseAnalyticsObserver observer;
-  static initialize() {
-    analytics = FirebaseAnalytics();
-    observer = FirebaseAnalyticsObserver(analytics: analytics);
+  static late FirebaseAnalytics _analytics = FirebaseAnalytics();
+
+  static Future<void> log(LogType logType, {String? property}) async {
+    await _analytics.logEvent(
+      name: logType.toString(),
+      parameters: <String, dynamic>{
+        'property': property,
+      },
+    );
   }
 }

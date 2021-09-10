@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/components/analytics.dart';
 import 'package:portfolio/components/portfolio_card.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/projects/project_data.dart';
@@ -70,6 +71,10 @@ class ProjectCard extends StatelessWidget {
                   splashRadius: Constants.cardIconSplash,
                   onPressed: () {
                     launch(data.gitHub);
+                    PortfolioAnalytics.log(
+                      LogType.cardGitHubClick,
+                      property: data.gitHub,
+                    );
                   },
                 ),
               if (data.link.isNotEmpty) SizedBox(width: 8),
@@ -85,6 +90,10 @@ class ProjectCard extends StatelessWidget {
                   splashRadius: Constants.cardIconSplash,
                   onPressed: () {
                     launch(data.link);
+                    PortfolioAnalytics.log(
+                      LogType.cardExternalLinkClick,
+                      property: data.link,
+                    );
                   },
                 ),
             ],

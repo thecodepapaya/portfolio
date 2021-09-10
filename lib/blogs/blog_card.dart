@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/blogs/blog_data.dart';
+import 'package:portfolio/components/analytics.dart';
 import 'package:portfolio/components/portfolio_card.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/components/card_tag.dart';
@@ -21,6 +22,7 @@ class BlogCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         launch(data.url);
+        PortfolioAnalytics.log(LogType.cardClick, property: data.url);
       },
       child: PortfolioCard(
         //TODO: Change to click when at least one blogs is up

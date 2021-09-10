@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/analytics.dart';
 import 'package:portfolio/components/scale_animator.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -60,6 +61,7 @@ class _NotFound404State extends State<NotFound404> {
                     onTap: () {
                       Navigator.of(context)
                           .pushReplacementNamed(Navigator.defaultRouteName);
+                      PortfolioAnalytics.log(LogType.home404Click);
                     },
                     child: Text(
                       S.of(context).notFoundHome,

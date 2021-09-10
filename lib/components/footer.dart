@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/analytics.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -29,6 +30,7 @@ class Footer extends StatelessWidget {
               "."),
           onTap: () {
             launch("https://dribbble.com/NicolasMzrd");
+            PortfolioAnalytics.log(LogType.footerCreditClick);
           },
         ),
       ),
