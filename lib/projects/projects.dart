@@ -66,7 +66,7 @@ final data = [
   ProjectData(
     title: "FASE - Post-covid attendance solution",
     description:
-        "A reliable WLAN and bluetooth based solution for attendance management in the institute in a post-covid era.",
+        "A reliable WLAN and bluetooth based post-covid attendance management solution for the institute.",
     gitHub: "https://github.com/thecodepapaya/fase-backend",
     link: "",
     technologies: ["Django", "DRF", "Flutter", "Python", "Dart"],
