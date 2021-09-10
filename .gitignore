@@ -45,6 +45,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Build exceptions
-!build/web/
-!build/web/*
+# Build exceptions (deprecated)
+; !build/web/
+; !build/web/*
