@@ -45,6 +45,23 @@
 </head>
 
 <body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDC-X89w34CRpXhsYj-yg11GP6xAZqtEWM",
+      authDomain: "portfolio-300c3.firebaseapp.com",
+      projectId: "portfolio-300c3",
+      storageBucket: "portfolio-300c3.appspot.com",
+      messagingSenderId: "755324536390",
+      appId: "1:755324536390:web:5c0990ad75b624269aec47",
+      measurementId: "G-XCRCBL3FRJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -111,7 +128,7 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
-  
+
   </script>
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>

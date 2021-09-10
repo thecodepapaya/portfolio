@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
@@ -8,8 +9,10 @@ import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/utils/routes.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-void main() {
+void main() async {
   setUrlStrategy(PathUrlStrategy());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
     ScreenBreakpoints(
       desktop: (Constants.halfScreenWidth + Constants.globalPadding) * 2,
@@ -39,10 +42,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: ColorPalette.background,
         primaryColor: ColorPalette.background,
-        accentColor: Colors.white,
         cardTheme: PortfolioTheme.cardTheme(context),
         textTheme: PortfolioTheme.textTheme(context),
-        iconTheme: PortfolioTheme.iconTheme(context),
+        iconTheme: PortfolioTheme.iconTheme(context), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
       ),
       onGenerateRoute: onGenerateRoute,
       initialRoute: '/',
