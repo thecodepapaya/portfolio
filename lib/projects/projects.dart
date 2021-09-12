@@ -61,7 +61,7 @@ final data = [
     gitHub: "https://github.com/thecodepapaya/udhari",
     link:
         "https://play.google.com/store/apps/details?id=com.thecodepapaya.udhari",
-    technologies: ["Flutter", "Django", "DRF", "Dart"],
+    technologies: ["Flutter", "Django", "DRF", "Dart", "Python"],
   ),
   ProjectData(
     title: "FASE - Post-covid attendance solution",
