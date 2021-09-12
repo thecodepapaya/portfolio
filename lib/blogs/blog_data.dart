@@ -7,7 +7,10 @@ class BlogData {
     required this.tags,
     required this.url,
     required this.read,
-  }) : assert(description.length < Constants.charLimitCardDesc);
+  }) {
+    assert(description.length < Constants.charLimitCardDesc);
+    tags.sort();
+  }
 
   final String title;
   final String description;
