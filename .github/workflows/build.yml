@@ -41,7 +41,7 @@ jobs:
 #         run: flutter test
       - name: Build Web
         run: |
-          flutter build web
+          flutter build web --web-renderer html --release
           cd build/web
           zip -r web-app.zip .
       - name: Release Web App

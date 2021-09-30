@@ -20,39 +20,56 @@ class Contact extends StatelessWidget {
         ),
         SizedBox(width: 50),
         contactIcon(
+          iconData: FontAwesomeIcons.briefcase,
+          url:
+              "https://my-portfolio-ashutosh-singh.s3.ap-south-1.amazonaws.com/resume_ashutosh_singh.pdf",
+          tooltip: "Ashutosh's Resume",
+        ),
+        contactIcon(
           iconData: FontAwesomeIcons.solidEnvelope,
-          url: "mailto:thecodepapaya@gmail.com",
+          url: "mailto:hello@thecodepapaya.dev",
+          tooltip: "Email Ashutosh",
         ),
         contactIcon(
           iconData: FontAwesomeIcons.twitter,
           url: "https://twitter.com/thecodepapaya",
+          tooltip: "Ashutosh's Twitter profile",
         ),
         contactIcon(
           iconData: FontAwesomeIcons.github,
           url: "https://github.com/thecodepapaya",
+          tooltip: "Ashutosh's GitHub profile",
         ),
         contactIcon(
           iconData: FontAwesomeIcons.linkedinIn,
           url: "https://linkedin.com/in/ashutoshsingh05as",
+          tooltip: "Ashutosh's LinkedIn profile",
         ),
         contactIcon(
           iconData: FontAwesomeIcons.stackOverflow,
           url: "https://stackoverflow.com/users/10505839/ashutosh-singh",
+          tooltip: "Ashutosh's StackOverflow profile",
         ),
         contactIcon(
           iconData: FontAwesomeIcons.discord,
           url: "https://discord.com/users/878192996825305128",
+          tooltip: "Ashutosh's Discord name tag",
         ),
       ],
     );
   }
 
-  Widget contactIcon({required IconData iconData, required String url}) {
+  Widget contactIcon({
+    required IconData iconData,
+    required String url,
+    required String tooltip,
+  }) {
     return IconButton(
       onPressed: () {
         launch(url);
         PortfolioAnalytics.log(LogType.contactClick, property: url);
       },
+      tooltip: tooltip,
       icon: FaIcon(
         iconData,
         size: iconSize,
