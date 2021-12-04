@@ -55,6 +55,14 @@ class Experience extends StatelessWidget {
 
 final data = [
   ExperienceData(
+    organizationName: "Qoohoo",
+    position: "Product Engineer Intern",
+    description:
+        "Building an awesome product for creators all around the world.",
+    startYearMonth: "Oct 21",
+    endYearMonth: "Present",
+  ),
+  ExperienceData(
     organizationName: "National Informatics Centre | Govt of India",
     position: "Trainee",
     description:
