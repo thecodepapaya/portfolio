@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor's degree majoring in computer science from Indian Institiute of Information Technology, Vadodara.`
+  /// `I am Ashutosh Singh, also known by the username thecodepapaya, freshly graduated from Indian Institute of Information Technology Vadodara. I love building delightful user experiences and system verticals.`
   String get aboutDesc {
     return Intl.message(
-      'I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor\'s degree majoring in computer science from Indian Institiute of Information Technology, Vadodara.',
+      'I am Ashutosh Singh, also known by the username thecodepapaya, freshly graduated from Indian Institute of Information Technology Vadodara. I love building delightful user experiences and system verticals.',
       name: 'aboutDesc',
       desc: '',
       args: [],

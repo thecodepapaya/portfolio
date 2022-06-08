@@ -32,7 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutDesc": MessageLookupByLibrary.simpleMessage(
-            "I am Ashutosh Singh, also known by the username thecodepapaya, currently pursuing my bachelor\'s degree majoring in computer science from Indian Institiute of Information Technology, Vadodara."),
+            "I am Ashutosh Singh, also known by the username thecodepapaya, freshly graduated from Indian Institute of Information Technology Vadodara. I love building delightful user experiences and system verticals."),
         "aboutGreeting": m0,
         "blogMinutes": MessageLookupByLibrary.simpleMessage("Min"),
         "footerCredit": MessageLookupByLibrary.simpleMessage(

@@ -14,5 +14,8 @@
     "cSpell.ignoreWords": [
         "Hori",
         "XCRCBL"
-    ]
+    ],
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///home/ashutosh/Projects/Flutter%20Apps/portfolio/.github/workflows/build.yml"
+    }
 }

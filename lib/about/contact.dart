@@ -22,7 +22,7 @@ class Contact extends StatelessWidget {
         contactIcon(
           iconData: FontAwesomeIcons.briefcase,
           url:
-              "https://my-portfolio-ashutosh-singh.s3.ap-south-1.amazonaws.com/resume_ashutosh_singh.pdf",
+              "https://my-portfolio-ashutosh-singh.s3.ap-south-1.amazonaws.com/Ashutosh_Resume.pdf",
           tooltip: "Ashutosh's Resume",
         ),
         contactIcon(

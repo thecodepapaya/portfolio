@@ -35,6 +35,8 @@ jobs:
         with:
           # The Flutter build release channel
           channel: stable
+      - name: Flutter doctor
+        run: flutter doctor -v
       - name: Fetch dependencies
         run: flutter pub get
 #       - name: Run Tests
