@@ -11,7 +11,7 @@ enum LogType {
 }
 
 class PortfolioAnalytics {
-  static late FirebaseAnalytics _analytics = FirebaseAnalytics();
+  static late FirebaseAnalytics _analytics = FirebaseAnalytics.instance;
 
   static Future<void> log(LogType logType, {String? property}) async {
     await _analytics.logEvent(
