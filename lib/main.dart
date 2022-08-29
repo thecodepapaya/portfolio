@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:portfolio/firebase_options.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/style/app_theme.dart';
 import 'package:portfolio/style/colours.dart';
@@ -12,7 +13,11 @@ import 'package:responsive_builder/responsive_builder.dart';
 void main() async {
   setUrlStrategy(PathUrlStrategy());
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
     ScreenBreakpoints(
       desktop: (Constants.halfScreenWidth + Constants.globalPadding) * 2,

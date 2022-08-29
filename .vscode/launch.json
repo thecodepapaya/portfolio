@@ -16,7 +16,6 @@
             "flutterMode": "profile"
         }
     ],
-    "dart.flutterSdkPath": "/home/ashutosh/Projects/flutter3/bin/flutter",
-    "dart.sdkPath": "/home/ashutosh/Projects/flutter3/bin/dart",
-
+    "dart.flutterSdkPath": "/Users/ashutoshsingh/flutter3/bin/",
+    "dart.sdkPath": "/Users/ashutoshsingh/flutter3/bin/dart",
 }
