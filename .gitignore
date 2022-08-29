@@ -48,3 +48,6 @@ app.*.map.json
 # Build exceptions (deprecated)
 ; !build/web/
 ; !build/web/*
+
+# NPM and nodejs related
+node_modules
