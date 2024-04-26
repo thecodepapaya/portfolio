@@ -29,8 +29,8 @@ class _HomePageState extends State<HomePage> {
 
   List<TabData> tabData = [];
 
-  double projectPercent = 1;
-  double experiencePercent = 0;
+  double experiencePercent = 1;
+  double projectPercent = 0;
   double blogPercent = 0;
 
   @override
@@ -38,13 +38,13 @@ class _HomePageState extends State<HomePage> {
     super.didChangeDependencies();
     tabData = [
       TabData(
+        globalKey: experienceKey,
+        tabName: S.of(context).tabExperience,
+      ),
+      TabData(
         globalKey: projectKey,
         tabName: S.of(context).tabProjects,
         isSelected: true,
-      ),
-      TabData(
-        globalKey: experienceKey,
-        tabName: S.of(context).tabExperience,
       ),
       TabData(
         globalKey: blogKey,
@@ -83,14 +83,14 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 VisibilityDetector(
-                  key: Key(tabData[0].tabName),
-                  child: Projects(key: projectKey),
-                  onVisibilityChanged: projectVisibility,
-                ),
-                VisibilityDetector(
                   key: Key(tabData[1].tabName),
                   child: Experience(key: experienceKey),
                   onVisibilityChanged: experienceVisibility,
+                ),
+                VisibilityDetector(
+                  key: Key(tabData[0].tabName),
+                  child: Projects(key: projectKey),
+                  onVisibilityChanged: projectVisibility,
                 ),
                 VisibilityDetector(
                   key: Key(tabData[2].tabName),
@@ -119,23 +119,23 @@ class _HomePageState extends State<HomePage> {
             child: Padding(
               padding: const EdgeInsets.all(Constants.cardMargin),
               child: Text(
-                S.of(context).tabProjects,
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-            ),
-          ),
-          Projects(),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: const EdgeInsets.all(Constants.cardMargin),
-              child: Text(
                 S.of(context).tabExperience,
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
           ),
           Experience(),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(Constants.cardMargin),
+              child: Text(
+                S.of(context).tabProjects,
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+            ),
+          ),
+          Projects(),
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
@@ -157,8 +157,8 @@ class _HomePageState extends State<HomePage> {
     List<Widget> mobileWidgets = [
       About(tabData: tabData),
       SizedBox(height: 50),
-      projectHeader(),
       experienceHeader(),
+      projectHeader(),
       blogHeader(),
       Footer(),
     ];
@@ -241,18 +241,19 @@ class _HomePageState extends State<HomePage> {
   }
 
   void handleChange() {
-    if (projectPercent > experiencePercent && projectPercent > blogPercent) {
+    if (experiencePercent > projectPercent && experiencePercent > blogPercent) {
       setAllFalse();
       setState(() {
         tabData[0].isSelected = true;
       });
     }
-    if (experiencePercent > projectPercent && experiencePercent > blogPercent) {
+    if (projectPercent > experiencePercent && projectPercent > blogPercent) {
       setAllFalse();
       setState(() {
         tabData[1].isSelected = true;
       });
     }
+
     if (blogPercent > experiencePercent && blogPercent > projectPercent) {
       setAllFalse();
       setState(() {

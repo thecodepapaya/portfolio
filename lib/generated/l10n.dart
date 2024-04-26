@@ -50,17 +50,17 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `I am Ashutosh Singh, also known by the username thecodepapaya, freshly graduated from Indian Institute of Information Technology Vadodara. I love building delightful user experiences and system verticals.`
+  /// `I am Ashutosh Singh, also known by the username thecodepapaya. I''m Passionate about crafting high-quality software that transforms industries and enhances the lives of individuals with a particular interest in healthcare and energy sectors.`
   String get aboutDesc {
     return Intl.message(
-      'I am Ashutosh Singh, also known by the username thecodepapaya, freshly graduated from Indian Institute of Information Technology Vadodara. I love building delightful user experiences and system verticals.',
+      'I am Ashutosh Singh, also known by the username thecodepapaya. I\'\'m Passionate about crafting high-quality software that transforms industries and enhances the lives of individuals with a particular interest in healthcare and energy sectors.',
       name: 'aboutDesc',
       desc: '',
       args: [],
     );
   }
 
-  /// `{greeting, select, em {Good morning, early bird} m {Good Morning} a {Good Afternoon} e {Good Evening} n {Hi there, night owl} other {Hello}}. I'm `
+  /// `{greeting, select, em {Good morning, early bird} m {Good Morning} a {Good Afternoon} e {Good Evening} n {Hi there, night owl} other {Hello}}. I''m `
   String aboutGreeting(Object greeting) {
     return Intl.message(
       '${Intl.select(greeting, {
@@ -70,7 +70,7 @@ class S {
             'e': 'Good Evening',
             'n': 'Hi there, night owl',
             'other': 'Hello'
-          })}. I\'m ',
+          })}. I\'\'m ',
       name: 'aboutGreeting',
       desc: '',
       args: [greeting],
@@ -147,20 +147,20 @@ class S {
     );
   }
 
-  /// `02.  Experience`
+  /// `01.  Experience`
   String get tabExperience {
     return Intl.message(
-      '02.  Experience',
+      '01.  Experience',
       name: 'tabExperience',
       desc: '',
       args: [],
     );
   }
 
-  /// `01.  Projects`
+  /// `02.  Projects`
   String get tabProjects {
     return Intl.message(
-      '01.  Projects',
+      '02.  Projects',
       name: 'tabProjects',
       desc: '',
       args: [],

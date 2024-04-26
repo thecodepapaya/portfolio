@@ -1,6 +1,6 @@
 {
-    "aboutDesc": "I am Ashutosh Singh, also known by the username thecodepapaya, freshly graduated from Indian Institute of Information Technology Vadodara. I love building delightful user experiences and system verticals.",
-    "aboutGreeting": "{greeting, select, em {Good morning, early bird} m {Good Morning} a {Good Afternoon} e {Good Evening} n {Hi there, night owl} other {Hello}}. I'm ",
+    "aboutDesc": "I am Ashutosh Singh, also known by the username thecodepapaya. I''m Passionate about crafting high-quality software that transforms industries and enhances the lives of individuals with a particular interest in healthcare and energy sectors.",
+    "aboutGreeting": "{greeting, select, em {Good morning, early bird} m {Good Morning} a {Good Afternoon} e {Good Evening} n {Hi there, night owl} other {Hello}}. I''m ",
     "blogMinutes": "Min",
     "footerCredit": "Based on designs by Nicolas Meuzard",
     "footerPower": "Powered by Flutter",
@@ -8,7 +8,7 @@
     "notFoundHome": "Take me back to 127.0.0.1",
     "notFoundInterjection": "Oh no!",
     "tabBlog": "03.  Blogs",
-    "tabExperience": "02.  Experience",
-    "tabProjects": "01.  Projects",
+    "tabExperience": "01.  Experience",
+    "tabProjects": "02.  Projects",
     "title": "Ashutosh Singh"
 }

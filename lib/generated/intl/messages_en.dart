@@ -27,12 +27,12 @@ class MessageLookup extends MessageLookupByLibrary {
             'e': 'Good Evening',
             'n': 'Hi there, night owl',
             'other': 'Hello',
-          })}. I\'m ";
+          })}. I\'\'m ";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutDesc": MessageLookupByLibrary.simpleMessage(
-            "I am Ashutosh Singh, also known by the username thecodepapaya, freshly graduated from Indian Institute of Information Technology Vadodara. I love building delightful user experiences and system verticals."),
+            "I am Ashutosh Singh, also known by the username thecodepapaya. I\'\'m Passionate about crafting high-quality software that transforms industries and enhances the lives of individuals with a particular interest in healthcare and energy sectors."),
         "aboutGreeting": m0,
         "blogMinutes": MessageLookupByLibrary.simpleMessage("Min"),
         "footerCredit": MessageLookupByLibrary.simpleMessage(
@@ -46,8 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFoundInterjection": MessageLookupByLibrary.simpleMessage("Oh no!"),
         "tabBlog": MessageLookupByLibrary.simpleMessage("03.  Blogs"),
         "tabExperience":
-            MessageLookupByLibrary.simpleMessage("02.  Experience"),
-        "tabProjects": MessageLookupByLibrary.simpleMessage("01.  Projects"),
+            MessageLookupByLibrary.simpleMessage("01.  Experience"),
+        "tabProjects": MessageLookupByLibrary.simpleMessage("02.  Projects"),
         "title": MessageLookupByLibrary.simpleMessage("Ashutosh Singh")
       };
 }

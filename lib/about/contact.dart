@@ -21,8 +21,7 @@ class Contact extends StatelessWidget {
         SizedBox(width: 50),
         contactIcon(
           iconData: FontAwesomeIcons.briefcase,
-          url:
-              "https://my-portfolio-ashutosh-singh.s3.ap-south-1.amazonaws.com/Ashutosh_Resume.pdf",
+          url: "https://www.linkedin.com/in/thecodepapaya/",
           tooltip: "Ashutosh's Resume",
         ),
         contactIcon(
@@ -42,7 +41,7 @@ class Contact extends StatelessWidget {
         ),
         contactIcon(
           iconData: FontAwesomeIcons.linkedinIn,
-          url: "https://linkedin.com/in/ashutoshsingh05as",
+          url: "https://www.linkedin.com/in/thecodepapaya/",
           tooltip: "Ashutosh's LinkedIn profile",
         ),
         contactIcon(

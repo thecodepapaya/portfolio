@@ -58,7 +58,8 @@ final data = [
     organizationName: "Even Healthcare",
     position: "Software Engineer",
     description:
-        "Building an awesome product for creators all around the world.",
+        "Build a new kind of health cover, One that keeps you healthy and "
+        "out of hospitals.",
     startYearMonth: "Aug 23",
     endYearMonth: "Present",
   ),
@@ -66,7 +67,9 @@ final data = [
     organizationName: "Qoohoo",
     position: "Product Engineer",
     description:
-        "Building an awesome product for creators all around the world.",
+        "Lead mobile engineer, designed and implemented several high impact "
+        "project from ground up including push notification system, payment "
+        "and ledger system and referral system.",
     startYearMonth: "Oct 21",
     endYearMonth: "July 23",
   ),
@@ -74,7 +77,8 @@ final data = [
     organizationName: "National Informatics Centre | Govt of India",
     position: "Trainee",
     description:
-        "Developed frontend components to house image processing utilities on NIC website. Integrated microservice APIs with Angular frontend.",
+        "Developed frontend components to house image processing utilities "
+        "on NIC website. Integrated microservice APIs with Angular frontend.",
     startYearMonth: "Jun 21",
     endYearMonth: "Jul 21",
   ),
@@ -82,7 +86,8 @@ final data = [
     organizationName: "Kowi Lifestyle Pvt Ltd",
     position: "Full stack Developer",
     description:
-        "Created company's core product from scratch. Wore different hats including SDE, DevOps and QA.",
+        "Created company's core product from scratch. Wore different hats "
+        "including SDE, DevOps and QA.",
     startYearMonth: "May 21",
     endYearMonth: "Jul 21",
   ),
@@ -90,7 +95,8 @@ final data = [
     organizationName: "Blindside HB GmbH",
     position: "Software Developer",
     description:
-        "Worked on the company's core product to enhance UX, add backend connectivity and modularize existing code.",
+        "Worked on the company's core product to enhance UX, add backend "
+        "connectivity and modularize existing code.",
     startYearMonth: "Sep 20",
     endYearMonth: "Nov 20",
   ),
