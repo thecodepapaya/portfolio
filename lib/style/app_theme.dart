@@ -1,48 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/style/colours.dart';
+import 'package:portfolio/style/colors.dart';
 import 'package:portfolio/utils/constants.dart';
 
 class PortfolioTheme {
   static TextTheme textTheme(BuildContext context) {
     return TextTheme(
-      bodyText1: Theme.of(context)
+      bodyLarge: Theme.of(context)
           .textTheme
-          .bodyText1
+          .bodyLarge
           ?.copyWith(color: ColorPalette.highlightText),
-      bodyText2: Theme.of(context)
+      bodyMedium: Theme.of(context)
           .textTheme
-          .bodyText2
+          .bodyMedium
           ?.copyWith(color: ColorPalette.descriptionText),
-      button: Theme.of(context).textTheme.button?.copyWith(color: Colors.white),
-      headline1: Theme.of(context)
+      labelLarge:
+          Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.white),
+      displayLarge: Theme.of(context)
           .textTheme
-          .headline1
+          .displayLarge
           ?.copyWith(color: Colors.white, fontSize: 84),
-      headline2:
-          Theme.of(context).textTheme.headline2?.copyWith(color: Colors.white),
-      headline3:
-          Theme.of(context).textTheme.headline3?.copyWith(color: Colors.white),
-      headline4:
-          Theme.of(context).textTheme.headline4?.copyWith(color: Colors.white),
-      headline5:
-          Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white),
-      headline6:
-          Theme.of(context).textTheme.headline6?.copyWith(color: Colors.white),
-      caption: Theme.of(context)
+      displayMedium: Theme.of(context)
           .textTheme
-          .caption
+          .displayMedium
+          ?.copyWith(color: Colors.white),
+      displaySmall: Theme.of(context)
+          .textTheme
+          .displaySmall
+          ?.copyWith(color: Colors.white),
+      headlineMedium: Theme.of(context)
+          .textTheme
+          .headlineMedium
+          ?.copyWith(color: Colors.white),
+      headlineSmall: Theme.of(context)
+          .textTheme
+          .headlineSmall
+          ?.copyWith(color: Colors.white),
+      titleLarge:
+          Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white),
+      bodySmall: Theme.of(context)
+          .textTheme
+          .bodySmall
           ?.copyWith(color: ColorPalette.dullWhite),
-      overline: Theme.of(context)
+      labelSmall: Theme.of(context)
           .textTheme
-          .overline
+          .labelSmall
           ?.copyWith(color: ColorPalette.dullWhite),
-      subtitle1: Theme.of(context)
+      titleMedium: Theme.of(context)
           .textTheme
-          .subtitle1
+          .titleMedium
           ?.copyWith(color: ColorPalette.icon),
-      subtitle2: Theme.of(context)
+      titleSmall: Theme.of(context)
           .textTheme
-          .subtitle2
+          .titleSmall
           ?.copyWith(color: ColorPalette.offWhiteText),
     );
   }

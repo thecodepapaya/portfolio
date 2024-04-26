@@ -9,10 +9,10 @@ class Projects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      desktop: desktopView(),
-      tablet: tabletView(),
-      mobile: mobileView(),
+    return ScreenTypeLayout.builder(
+      desktop: (_) => desktopView(),
+      tablet: (_) => tabletView(),
+      mobile: (_) => mobileView(),
     );
   }
 

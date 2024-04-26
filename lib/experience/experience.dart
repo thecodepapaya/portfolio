@@ -9,10 +9,10 @@ class Experience extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      desktop: desktopView(),
-      tablet: tabletView(),
-      mobile: mobileView(),
+    return ScreenTypeLayout.builder(
+      desktop: (_) => desktopView(),
+      tablet: (_) => tabletView(),
+      mobile: (_) => mobileView(),
     );
   }
 
@@ -55,12 +55,20 @@ class Experience extends StatelessWidget {
 
 final data = [
   ExperienceData(
+    organizationName: "Even Healthcare",
+    position: "Software Engineer",
+    description:
+        "Building an awesome product for creators all around the world.",
+    startYearMonth: "Aug 23",
+    endYearMonth: "Present",
+  ),
+  ExperienceData(
     organizationName: "Qoohoo",
-    position: "Product Engineer Intern",
+    position: "Product Engineer",
     description:
         "Building an awesome product for creators all around the world.",
     startYearMonth: "Oct 21",
-    endYearMonth: "Present",
+    endYearMonth: "July 23",
   ),
   ExperienceData(
     organizationName: "National Informatics Centre | Govt of India",

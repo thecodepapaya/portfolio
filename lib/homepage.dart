@@ -3,7 +3,7 @@ import 'package:portfolio/about/about.dart';
 import 'package:portfolio/about/tabs.dart';
 import 'package:portfolio/blogs/blogs.dart';
 import 'package:portfolio/components/footer.dart';
-import 'package:portfolio/style/colours.dart';
+import 'package:portfolio/style/colors.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/experience/experience.dart';
 import 'package:portfolio/generated/l10n.dart';
@@ -58,10 +58,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(Constants.globalPadding),
-        child: ScreenTypeLayout(
-          desktop: desktopView(),
-          tablet: tabletView(context),
-          mobile: mobileView(context),
+        child: ScreenTypeLayout.builder(
+          desktop: (context) => desktopView(),
+          tablet: (context) => tabletView(context),
+          mobile: (context) => mobileView(context),
         ),
       ),
     );
@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(Constants.cardMargin),
               child: Text(
                 S.of(context).tabProjects,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
           ),
@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(Constants.cardMargin),
               child: Text(
                 S.of(context).tabExperience,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
           ),
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(Constants.cardMargin),
               child: Text(
                 S.of(context).tabBlog,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
           ),
@@ -181,7 +181,7 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(Constants.cardMargin),
           child: Text(
             S.of(context).tabProjects.split("  ")[1],
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),
       ),
@@ -199,7 +199,7 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(Constants.cardMargin),
           child: Text(
             S.of(context).tabExperience.split("  ")[1],
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),
       ),
@@ -217,7 +217,7 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(Constants.cardMargin),
           child: Text(
             S.of(context).tabBlog.split("  ")[1],
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),
       ),

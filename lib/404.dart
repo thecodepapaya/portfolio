@@ -18,9 +18,9 @@ class _NotFound404State extends State<NotFound404> {
   Widget build(BuildContext context) {
     var textStyle = getValueForScreenType<TextStyle>(
       context: context,
-      mobile: Theme.of(context).textTheme.headline4!,
-      tablet: Theme.of(context).textTheme.headline2,
-      desktop: Theme.of(context).textTheme.headline1,
+      mobile: Theme.of(context).textTheme.headlineMedium!,
+      tablet: Theme.of(context).textTheme.displayMedium,
+      desktop: Theme.of(context).textTheme.displayLarge,
     );
 
     var padding = getValueForScreenType<EdgeInsets>(
@@ -67,7 +67,7 @@ class _NotFound404State extends State<NotFound404> {
                       S.of(context).notFoundHome,
                       style: Theme.of(context)
                           .textTheme
-                          .headline6
+                          .titleLarge
                           ?.copyWith(color: textColor),
                     ),
                   ),

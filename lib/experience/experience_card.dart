@@ -4,7 +4,7 @@ import 'package:portfolio/components/portfolio_card.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/experience/experience_data.dart';
 import 'package:portfolio/components/card_tag.dart';
-import 'package:portfolio/style/colours.dart';
+import 'package:portfolio/style/colors.dart';
 
 class ExperienceCard extends StatelessWidget {
   const ExperienceCard({
@@ -35,7 +35,7 @@ class ExperienceCard extends StatelessWidget {
           ),
           Text(
             data.organizationName,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),

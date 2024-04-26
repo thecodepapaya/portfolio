@@ -26,10 +26,10 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      desktop: desktopView(context),
-      tablet: tabletView(context),
-      mobile: mobileView(context),
+    return ScreenTypeLayout.builder(
+      desktop: (context) => desktopView(context),
+      tablet: (context) => tabletView(context),
+      mobile: (context) => mobileView(context),
     );
   }
 
@@ -49,12 +49,12 @@ class About extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(S.of(context).aboutGreeting(dayTime()),
-                  style: Theme.of(context).textTheme.headline3),
+                  style: Theme.of(context).textTheme.displaySmall),
               Text(S.of(context).title + '.',
-                  style: Theme.of(context).textTheme.headline1),
+                  style: Theme.of(context).textTheme.displayLarge),
               SizedBox(height: 40),
               Text(S.of(context).aboutDesc,
-                  style: Theme.of(context).textTheme.subtitle1),
+                  style: Theme.of(context).textTheme.titleMedium),
             ],
           ),
           Tabs(tabData: tabData),
@@ -84,16 +84,16 @@ class About extends StatelessWidget {
             children: [
               Text(
                 S.of(context).aboutGreeting(dayTime()),
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               Text(
                 S.of(context).title + '.',
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               SizedBox(height: 40),
               Text(
                 S.of(context).aboutDesc,
-                style: Theme.of(context).textTheme.subtitle1,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ],
           ),
@@ -121,19 +121,19 @@ class About extends StatelessWidget {
               FittedBox(
                 child: Text(
                   S.of(context).aboutGreeting(dayTime()),
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme.of(context).textTheme.displaySmall,
                 ),
               ),
               FittedBox(
                 child: Text(
                   S.of(context).title + '.',
-                  style: Theme.of(context).textTheme.headline1,
+                  style: Theme.of(context).textTheme.displayLarge,
                 ),
               ),
               SizedBox(height: 40),
               Text(
                 S.of(context).aboutDesc,
-                style: Theme.of(context).textTheme.subtitle1,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ],
           ),

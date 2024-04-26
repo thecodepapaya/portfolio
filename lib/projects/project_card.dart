@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/analytics.dart';
-import 'package:portfolio/components/portfolio_card.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/projects/project_data.dart';
 import 'package:portfolio/components/card_tag.dart';
-import 'package:portfolio/style/colours.dart';
+import 'package:portfolio/components/portfolio_card.dart';
+import 'package:portfolio/projects/project_data.dart';
+import 'package:portfolio/style/colors.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
@@ -29,7 +29,7 @@ class ProjectCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               FaIcon(
-                FontAwesomeIcons.tools,
+                FontAwesomeIcons.screwdriverWrench,
                 size: Constants.faIconSizeCardHeader,
                 color: ColorPalette.dullWhite,
               ),
@@ -42,7 +42,7 @@ class ProjectCard extends StatelessWidget {
           ),
           Text(
             data.title,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
@@ -70,7 +70,7 @@ class ProjectCard extends StatelessWidget {
                   constraints: BoxConstraints(minHeight: 0, minWidth: 0),
                   splashRadius: Constants.cardIconSplash,
                   onPressed: () {
-                    launch(data.gitHub);
+                    launchUrlString(data.gitHub);
                     PortfolioAnalytics.log(
                       LogType.cardGitHubClick,
                       property: data.gitHub,
@@ -81,7 +81,7 @@ class ProjectCard extends StatelessWidget {
               if (data.link.isNotEmpty)
                 IconButton(
                   icon: FaIcon(
-                    FontAwesomeIcons.externalLinkAlt,
+                    FontAwesomeIcons.upRightFromSquare,
                     size: Constants.faIconSizeCard,
                     color: ColorPalette.dullWhite,
                   ),
@@ -89,7 +89,7 @@ class ProjectCard extends StatelessWidget {
                   constraints: BoxConstraints(minHeight: 0, minWidth: 0),
                   splashRadius: Constants.cardIconSplash,
                   onPressed: () {
-                    launch(data.link);
+                    launchUrlString(data.link);
                     PortfolioAnalytics.log(
                       LogType.cardExternalLinkClick,
                       property: data.link,

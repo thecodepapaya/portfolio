@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/blogs/blog_data.dart';
 import 'package:portfolio/components/analytics.dart';
-import 'package:portfolio/components/portfolio_card.dart';
-import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/components/card_tag.dart';
-import 'package:portfolio/style/colours.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio/components/portfolio_card.dart';
 import 'package:portfolio/generated/l10n.dart';
+import 'package:portfolio/style/colors.dart';
+import 'package:portfolio/utils/constants.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class BlogCard extends StatelessWidget {
   const BlogCard({
@@ -21,7 +21,7 @@ class BlogCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        launch(data.url);
+        launchUrlString(data.url);
         PortfolioAnalytics.log(LogType.cardClick, property: data.url);
       },
       child: PortfolioCard(
@@ -48,7 +48,7 @@ class BlogCard extends StatelessWidget {
             ),
             Text(
               data.title,
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),

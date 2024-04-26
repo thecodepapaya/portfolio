@@ -5,7 +5,7 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:portfolio/firebase_options.dart';
 import 'package:portfolio/generated/l10n.dart';
 import 'package:portfolio/style/app_theme.dart';
-import 'package:portfolio/style/colours.dart';
+import 'package:portfolio/style/colors.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/utils/routes.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
         Locale('en', ''),
       ],
       theme: ThemeData(
+        useMaterial3: false,
         scaffoldBackgroundColor: ColorPalette.background,
         primaryColor: ColorPalette.background,
         cardTheme: PortfolioTheme.cardTheme(context),

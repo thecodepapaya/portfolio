@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/style/colours.dart';
+import 'package:portfolio/style/colors.dart';
 
 class CardTag extends StatelessWidget {
   const CardTag({
@@ -20,7 +20,7 @@ class CardTag extends StatelessWidget {
         padding: EdgeInsets.all(tagSize),
         child: Text(
           tag.toUpperCase(),
-          style: Theme.of(context).textTheme.overline,
+          style: Theme.of(context).textTheme.labelSmall,
         ),
       ),
     );

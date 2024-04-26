@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/analytics.dart';
 import 'package:portfolio/utils/constants.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class Contact extends StatelessWidget {
   const Contact({Key? key}) : super(key: key);
@@ -66,7 +66,7 @@ class Contact extends StatelessWidget {
   }) {
     return IconButton(
       onPressed: () {
-        launch(url);
+        launchUrlString(url);
         PortfolioAnalytics.log(LogType.contactClick, property: url);
       },
       tooltip: tooltip,
