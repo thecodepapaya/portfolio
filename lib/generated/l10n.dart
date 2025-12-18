@@ -18,8 +18,10 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+      _current != null,
+      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
+    );
     return _current!;
   }
 
@@ -41,8 +43,10 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -63,14 +67,7 @@ class S {
   /// `{greeting, select, em {Good morning, early bird} m {Good Morning} a {Good Afternoon} e {Good Evening} n {Hi there, night owl} other {Hello}}. I''m `
   String aboutGreeting(Object greeting) {
     return Intl.message(
-      '${Intl.select(greeting, {
-            'em': 'Good morning, early bird',
-            'm': 'Good Morning',
-            'a': 'Good Afternoon',
-            'e': 'Good Evening',
-            'n': 'Hi there, night owl',
-            'other': 'Hello'
-          })}. I\'\'m ',
+      '${Intl.select(greeting, {'em': 'Good morning, early bird', 'm': 'Good Morning', 'a': 'Good Afternoon', 'e': 'Good Evening', 'n': 'Hi there, night owl', 'other': 'Hello'})}. I\'\'m ',
       name: 'aboutGreeting',
       desc: '',
       args: [greeting],
@@ -79,12 +76,7 @@ class S {
 
   /// `Min`
   String get blogMinutes {
-    return Intl.message(
-      'Min',
-      name: 'blogMinutes',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Min', name: 'blogMinutes', desc: '', args: []);
   }
 
   /// `Based on designs by Nicolas Meuzard`
@@ -139,12 +131,7 @@ class S {
 
   /// `03.  Blogs`
   String get tabBlog {
-    return Intl.message(
-      '03.  Blogs',
-      name: 'tabBlog',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('03.  Blogs', name: 'tabBlog', desc: '', args: []);
   }
 
   /// `01.  Experience`
@@ -169,12 +156,7 @@ class S {
 
   /// `Ashutosh Singh`
   String get title {
-    return Intl.message(
-      'Ashutosh Singh',
-      name: 'title',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Ashutosh Singh', name: 'title', desc: '', args: []);
   }
 }
 
@@ -182,9 +164,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[
-      Locale.fromSubtags(languageCode: 'en'),
-    ];
+    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
   }
 
   @override

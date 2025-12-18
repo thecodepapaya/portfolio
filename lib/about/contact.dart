@@ -30,9 +30,9 @@ class Contact extends StatelessWidget {
           tooltip: "Email Ashutosh",
         ),
         contactIcon(
-          iconData: FontAwesomeIcons.twitter,
+          iconData: FontAwesomeIcons.xTwitter,
           url: "https://twitter.com/thecodepapaya",
-          tooltip: "Ashutosh's Twitter profile",
+          tooltip: "Ashutosh's X profile",
         ),
         contactIcon(
           iconData: FontAwesomeIcons.github,

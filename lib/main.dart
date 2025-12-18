@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: false,
         scaffoldBackgroundColor: ColorPalette.background,
         primaryColor: ColorPalette.background,
-        cardTheme: PortfolioTheme.cardTheme(context),
+        cardTheme: PortfolioTheme.cardTheme(context).data,
         textTheme: PortfolioTheme.textTheme(context),
         iconTheme: PortfolioTheme.iconTheme(context),
         colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),

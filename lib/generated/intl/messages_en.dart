@@ -20,34 +20,30 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(greeting) => "${Intl.select(greeting, {
-            'em': 'Good morning, early bird',
-            'm': 'Good Morning',
-            'a': 'Good Afternoon',
-            'e': 'Good Evening',
-            'n': 'Hi there, night owl',
-            'other': 'Hello',
-          })}. I\'\'m ";
+  static String m0(greeting) =>
+      "${Intl.select(greeting, {'em': 'Good morning, early bird', 'm': 'Good Morning', 'a': 'Good Afternoon', 'e': 'Good Evening', 'n': 'Hi there, night owl', 'other': 'Hello'})}. I\'\'m ";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "aboutDesc": MessageLookupByLibrary.simpleMessage(
-            "I am Ashutosh Singh, also known by the username thecodepapaya. I\'\'m Passionate about crafting high-quality software that transforms industries and enhances the lives of individuals with a particular interest in healthcare and energy sectors."),
-        "aboutGreeting": m0,
-        "blogMinutes": MessageLookupByLibrary.simpleMessage("Min"),
-        "footerCredit": MessageLookupByLibrary.simpleMessage(
-            "Based on designs by Nicolas Meuzard"),
-        "footerPower":
-            MessageLookupByLibrary.simpleMessage("Powered by Flutter"),
-        "notFoundDespise": MessageLookupByLibrary.simpleMessage(
-            "Looks like you are lost ... on a single page application, duh!"),
-        "notFoundHome":
-            MessageLookupByLibrary.simpleMessage("Take me back to 127.0.0.1"),
-        "notFoundInterjection": MessageLookupByLibrary.simpleMessage("Oh no!"),
-        "tabBlog": MessageLookupByLibrary.simpleMessage("03.  Blogs"),
-        "tabExperience":
-            MessageLookupByLibrary.simpleMessage("01.  Experience"),
-        "tabProjects": MessageLookupByLibrary.simpleMessage("02.  Projects"),
-        "title": MessageLookupByLibrary.simpleMessage("Ashutosh Singh")
-      };
+    "aboutDesc": MessageLookupByLibrary.simpleMessage(
+      "I am Ashutosh Singh, also known by the username thecodepapaya. I\'\'m Passionate about crafting high-quality software that transforms industries and enhances the lives of individuals with a particular interest in healthcare and energy sectors.",
+    ),
+    "aboutGreeting": m0,
+    "blogMinutes": MessageLookupByLibrary.simpleMessage("Min"),
+    "footerCredit": MessageLookupByLibrary.simpleMessage(
+      "Based on designs by Nicolas Meuzard",
+    ),
+    "footerPower": MessageLookupByLibrary.simpleMessage("Powered by Flutter"),
+    "notFoundDespise": MessageLookupByLibrary.simpleMessage(
+      "Looks like you are lost ... on a single page application, duh!",
+    ),
+    "notFoundHome": MessageLookupByLibrary.simpleMessage(
+      "Take me back to 127.0.0.1",
+    ),
+    "notFoundInterjection": MessageLookupByLibrary.simpleMessage("Oh no!"),
+    "tabBlog": MessageLookupByLibrary.simpleMessage("03.  Blogs"),
+    "tabExperience": MessageLookupByLibrary.simpleMessage("01.  Experience"),
+    "tabProjects": MessageLookupByLibrary.simpleMessage("02.  Projects"),
+    "title": MessageLookupByLibrary.simpleMessage("Ashutosh Singh"),
+  };
 }

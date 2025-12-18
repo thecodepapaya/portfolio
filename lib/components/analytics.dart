@@ -16,8 +16,8 @@ class PortfolioAnalytics {
   static Future<void> log(LogType logType, {String? property}) async {
     await _analytics.logEvent(
       name: logType.toString(),
-      parameters: <String, dynamic>{
-        'property': property,
+      parameters: <String, Object>{
+        'property': property ?? '',
       },
     );
   }
