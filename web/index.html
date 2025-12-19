@@ -27,7 +27,7 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="styles.css" as="style">
   <link rel="preload" href="flutter_bootstrap.js" as="script">
-  <link rel="preload" href="main.dart.js" as="script">
+  <link rel="preload" href="main.dart.wasm" as="script">
   <link rel="preload"
     href="https://www.gstatic.com/flutter-canvaskit/035316565ad77281a75305515e4682e6c4c6f7ca/chromium/canvaskit.js"
     as="script" crossorigin="anonymous">
@@ -60,8 +60,8 @@
   <script src="flutter_bootstrap.js" async></script>
 
   <!-- Load Firebase scripts with defer to not block rendering -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" defer></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" async defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js" async defer></script>
   <script defer>
     // Your web app's Firebase configuration
     const firebaseConfig = {
